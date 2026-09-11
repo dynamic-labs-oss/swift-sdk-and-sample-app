@@ -1873,6 +1873,14 @@ public enum TokenScope : Swift.String, Swift.Codable, Swift.Equatable, Swift.Cas
   case consoleProjectDelete
   case consoleAdminActionReview
   case consoleApprovalWorkflowUpdate
+  case businessAccountSignerAdd
+  case businessAccountSignerRemove
+  case businessAccountMemberAdd
+  case businessAccountMemberRemove
+  case businessAccountMemberRoleUpdate
+  case businessAccountTransferOwnership
+  case businessAccountLinkWallet
+  case businessAccountWalletRemove
   public init?(rawValue: Swift.String)
   public typealias AllCases = [DynamicSDKSwift.TokenScope]
   public typealias RawValue = Swift.String
