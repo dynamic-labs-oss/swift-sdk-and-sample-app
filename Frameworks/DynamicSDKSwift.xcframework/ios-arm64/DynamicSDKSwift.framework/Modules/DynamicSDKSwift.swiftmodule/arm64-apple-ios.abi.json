@@ -71323,6 +71323,302 @@
             "moduleName": "DynamicSDKSwift"
           },
           {
+            "kind": "Var",
+            "name": "businessAccountSignerAdd",
+            "printedName": "businessAccountSignerAdd",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO24businessAccountSignerAddyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO24businessAccountSignerAddyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountSignerRemove",
+            "printedName": "businessAccountSignerRemove",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO27businessAccountSignerRemoveyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO27businessAccountSignerRemoveyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountMemberAdd",
+            "printedName": "businessAccountMemberAdd",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO24businessAccountMemberAddyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO24businessAccountMemberAddyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountMemberRemove",
+            "printedName": "businessAccountMemberRemove",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO27businessAccountMemberRemoveyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO27businessAccountMemberRemoveyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountMemberRoleUpdate",
+            "printedName": "businessAccountMemberRoleUpdate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO31businessAccountMemberRoleUpdateyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO31businessAccountMemberRoleUpdateyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountTransferOwnership",
+            "printedName": "businessAccountTransferOwnership",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO32businessAccountTransferOwnershipyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO32businessAccountTransferOwnershipyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountLinkWallet",
+            "printedName": "businessAccountLinkWallet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO25businessAccountLinkWalletyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO25businessAccountLinkWalletyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "businessAccountWalletRemove",
+            "printedName": "businessAccountWalletRemove",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.TokenScope.Type) -> DynamicSDKSwift.TokenScope",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TokenScope",
+                    "printedName": "DynamicSDKSwift.TokenScope",
+                    "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.TokenScope.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenScope",
+                        "printedName": "DynamicSDKSwift.TokenScope",
+                        "usr": "s:15DynamicSDKSwift10TokenScopeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift10TokenScopeO27businessAccountWalletRemoveyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift10TokenScopeO27businessAccountWalletRemoveyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -98932,6 +99228,62 @@
       "offset": 1033,
       "length": 34,
       "value": "\"console:approval_workflow:update\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1110,
+      "length": 29,
+      "value": "\"business_account:signer:add\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1181,
+      "length": 32,
+      "value": "\"business_account:signer:remove\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1255,
+      "length": 29,
+      "value": "\"business_account:member:add\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1326,
+      "length": 32,
+      "value": "\"business_account:member:remove\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1400,
+      "length": 37,
+      "value": "\"business_account:member:role:update\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1480,
+      "length": 37,
+      "value": "\"business_account:transfer_ownership\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1559,
+      "length": 30,
+      "value": "\"business_account:link_wallet\""
+    },
+    {
+      "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "kind": "StringLiteral",
+      "offset": 1631,
+      "length": 32,
+      "value": "\"business_account:wallet:remove\""
     },
     {
       "filePath": "\/Users\/ngarabandic\/Documents\/Programiranje\/Dynamic\/mobile-sdks\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
