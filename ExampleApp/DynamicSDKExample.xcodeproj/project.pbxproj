@@ -44,6 +44,8 @@
 		BBF6EE2C54F3261916A52BD5 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA35598A278FA06EBE84A0A8 /* SplashScreenViewModel.swift */; };
 		CUST0001000000000001 /* CustomBalanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CUST0002000000000001 /* CustomBalanceScreen.swift */; };
 		CUST0001000000000002 /* CustomBalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CUST0002000000000002 /* CustomBalanceViewModel.swift */; };
+		EARN0001000000000001 /* EarnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EARN0002000000000001 /* EarnScreen.swift */; };
+		EARN0001000000000002 /* EarnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EARN0002000000000002 /* EarnViewModel.swift */; };
 		PRJS0001000000000001 /* ProjectSettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = PRJS0002000000000001 /* ProjectSettingsScreen.swift */; };
 		SPLT0001000000000001 /* SolanaSendSplTokenScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = SPLT0002000000000001 /* SolanaSendSplTokenScreen.swift */; };
 		STUP0001000000000001 /* StepUpAuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = STUP0002000000000001 /* StepUpAuthScreen.swift */; };
@@ -59,6 +61,10 @@
 		BTC00001000000000001 /* BitcoinSignMessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BTC00002000000000001 /* BitcoinSignMessageScreen.swift */; };
 		BTC00001000000000002 /* BitcoinSendScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BTC00002000000000002 /* BitcoinSendScreen.swift */; };
 		BTC00001000000000003 /* BitcoinSignPsbtScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BTC00002000000000003 /* BitcoinSignPsbtScreen.swift */; };
+		STL00001000000000001 /* StellarSignMessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = STL00002000000000001 /* StellarSignMessageScreen.swift */; };
+		STL00001000000000002 /* StellarSignTransactionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = STL00002000000000002 /* StellarSignTransactionScreen.swift */; };
+		STL00001000000000003 /* StellarSendBalanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = STL00002000000000003 /* StellarSendBalanceScreen.swift */; };
+		STL00001000000000004 /* StellarAddTrustlineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = STL00002000000000004 /* StellarAddTrustlineScreen.swift */; };
 		WC000001000000000001 /* WalletConnectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = WC000002000000000001 /* WalletConnectScreen.swift */; };
 		WC000001000000000002 /* WcGlobalListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = WC000002000000000002 /* WcGlobalListener.swift */; };
 		WC000001000000000003 /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = WC000002000000000003 /* QrScannerView.swift */; };
@@ -101,6 +107,8 @@
 		BA35598A278FA06EBE84A0A8 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		CUST0002000000000001 /* CustomBalanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBalanceScreen.swift; sourceTree = "<group>"; };
 		CUST0002000000000002 /* CustomBalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBalanceViewModel.swift; sourceTree = "<group>"; };
+		EARN0002000000000001 /* EarnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnScreen.swift; sourceTree = "<group>"; };
+		EARN0002000000000002 /* EarnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnViewModel.swift; sourceTree = "<group>"; };
 		PRJS0002000000000001 /* ProjectSettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsScreen.swift; sourceTree = "<group>"; };
 		SPLT0002000000000001 /* SolanaSendSplTokenScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolanaSendSplTokenScreen.swift; sourceTree = "<group>"; };
 		STUP0002000000000001 /* StepUpAuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepUpAuthScreen.swift; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 		BTC00002000000000001 /* BitcoinSignMessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinSignMessageScreen.swift; sourceTree = "<group>"; };
 		BTC00002000000000002 /* BitcoinSendScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinSendScreen.swift; sourceTree = "<group>"; };
 		BTC00002000000000003 /* BitcoinSignPsbtScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinSignPsbtScreen.swift; sourceTree = "<group>"; };
+		STL00002000000000001 /* StellarSignMessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarSignMessageScreen.swift; sourceTree = "<group>"; };
+		STL00002000000000002 /* StellarSignTransactionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarSignTransactionScreen.swift; sourceTree = "<group>"; };
+		STL00002000000000003 /* StellarSendBalanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarSendBalanceScreen.swift; sourceTree = "<group>"; };
+		STL00002000000000004 /* StellarAddTrustlineScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarAddTrustlineScreen.swift; sourceTree = "<group>"; };
 		WC000002000000000001 /* WalletConnectScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectScreen.swift; sourceTree = "<group>"; };
 		WC000002000000000002 /* WcGlobalListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WcGlobalListener.swift; sourceTree = "<group>"; };
 		WC000002000000000003 /* QrScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerView.swift; sourceTree = "<group>"; };
@@ -226,6 +238,8 @@
 				2F7B0B6D9B0F4D3D9F7D0C41 /* SwitchNetworkViewModel.swift */,
 				CUST0002000000000001 /* CustomBalanceScreen.swift */,
 				CUST0002000000000002 /* CustomBalanceViewModel.swift */,
+				EARN0002000000000001 /* EarnScreen.swift */,
+				EARN0002000000000002 /* EarnViewModel.swift */,
 				9B2C9C7F2B00000100000007 /* SignMessageScreen.swift */,
 				9B2C9C7F2B00000100000008 /* SolanaSignMessageScreen.swift */,
 				9B2C9C7F2B00000100000015 /* SolanaSignTransactionScreen.swift */,
@@ -245,6 +259,10 @@
 				BTC00002000000000001 /* BitcoinSignMessageScreen.swift */,
 				BTC00002000000000002 /* BitcoinSendScreen.swift */,
 				BTC00002000000000003 /* BitcoinSignPsbtScreen.swift */,
+				STL00002000000000001 /* StellarSignMessageScreen.swift */,
+				STL00002000000000002 /* StellarSignTransactionScreen.swift */,
+				STL00002000000000003 /* StellarSendBalanceScreen.swift */,
+				STL00002000000000004 /* StellarAddTrustlineScreen.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -367,6 +385,8 @@
 				45D32B68DEAED49BBC8AC812 /* EvmSendErc20Screen.swift in Sources */,
 				CUST0001000000000001 /* CustomBalanceScreen.swift in Sources */,
 				CUST0001000000000002 /* CustomBalanceViewModel.swift in Sources */,
+				EARN0001000000000001 /* EarnScreen.swift in Sources */,
+				EARN0001000000000002 /* EarnViewModel.swift in Sources */,
 				PRJS0001000000000001 /* ProjectSettingsScreen.swift in Sources */,
 				SPLT0001000000000001 /* SolanaSendSplTokenScreen.swift in Sources */,
 				STUP0001000000000001 /* StepUpAuthScreen.swift in Sources */,
@@ -382,6 +402,10 @@
 				BTC00001000000000001 /* BitcoinSignMessageScreen.swift in Sources */,
 				BTC00001000000000002 /* BitcoinSendScreen.swift in Sources */,
 				BTC00001000000000003 /* BitcoinSignPsbtScreen.swift in Sources */,
+				STL00001000000000001 /* StellarSignMessageScreen.swift in Sources */,
+				STL00001000000000002 /* StellarSignTransactionScreen.swift in Sources */,
+				STL00001000000000003 /* StellarSendBalanceScreen.swift in Sources */,
+				STL00001000000000004 /* StellarAddTrustlineScreen.swift in Sources */,
 				WC000001000000000001 /* WalletConnectScreen.swift in Sources */,
 				WC000001000000000002 /* WcGlobalListener.swift in Sources */,
 				WC000001000000000003 /* QrScannerView.swift in Sources */,

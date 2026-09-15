@@ -50,6 +50,7 @@ final public class EvmModule {
 @_hasMissingDesignatedInitializers final public class EvmClient {
   final public func getGasPrice() async throws -> SwiftBigInt.BigUInt
   final public func getTransactionCount(address: Swift.String) async throws -> Swift.Int
+  final public func getTransactionReceipt(transactionHash: Swift.String) async throws -> DynamicSDKSwift.EvmTransactionReceipt?
   final public func getBalance(address: Swift.String) async throws -> SwiftBigInt.BigUInt
   @objc deinit
 }
@@ -89,6 +90,16 @@ public struct BlockhashWithExpiryBlockHeight {
 }
 @_hasMissingDesignatedInitializers public class SolanaTransactionBuilder {
   public static func createVersionedTransferTransaction(from: Swift.String, to: Swift.String, lamports: Swift.UInt64, recentBlockhash: SolanaWeb3.Blockhash, addressLookupTableAccounts: [SolanaWeb3.AddressLookupTableAccount]? = nil) throws -> SolanaWeb3.Transaction
+  @objc deinit
+}
+final public class StellarModule {
+  public init(_ transport: DynamicSDKSwift.MessageTransport)
+  final public func signMessage(walletId: Swift.String, message: Swift.String) async throws -> Swift.String
+  final public func signTransaction(walletId: Swift.String, transactionXdr: Swift.String) async throws -> Swift.String
+  final public func sendBalance(walletId: Swift.String, toAddress: Swift.String, amount: Swift.String, tokenAddress: Swift.String? = nil, tokenDecimals: Swift.Int? = nil) async throws -> Swift.String
+  final public func addTrustline(walletId: Swift.String, assetCode: Swift.String, assetIssuer: Swift.String, limit: Swift.String? = nil) async throws -> Swift.String
+  final public func getBalance(walletId: Swift.String, assetCode: Swift.String? = nil, assetIssuer: Swift.String? = nil) async throws -> Swift.String
+  final public func getNetwork(walletId: Swift.String) async throws -> Swift.String
   @objc deinit
 }
 final public class SuiModule {
@@ -341,10 +352,12 @@ final public class VisibilityModule {
   final public let sui: DynamicSDKSwift.SuiModule
   final public let bitcoin: DynamicSDKSwift.BitcoinModule
   final public let ton: DynamicSDKSwift.TonModule
+  final public let stellar: DynamicSDKSwift.StellarModule
   final public let deviceRegistration: DynamicSDKSwift.DeviceRegistrationModule
   final public let walletConnect: DynamicSDKSwift.WalletConnectModule
   final public let businessAccounts: DynamicSDKSwift.BusinessAccountsModule
   final public let policies: DynamicSDKSwift.PoliciesModule
+  final public let earn: DynamicSDKSwift.EarnModule
   final public let webViewController: DynamicSDKSwift.DynamicWebViewController
   final public let overlayWindow: DynamicSDKSwift.DynamicOverlayWindowManager
   final public let props: DynamicSDKSwift.ClientProps
@@ -587,6 +600,127 @@ public struct DownloadFileArgs : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct EarnEvmApprovalData : Swift.Codable, Swift.Equatable {
+  public let tokenAddress: Swift.String
+  public let spenderAddress: Swift.String
+  public let amount: Swift.String
+  public init(tokenAddress: Swift.String, spenderAddress: Swift.String, amount: Swift.String)
+  public static func == (a: DynamicSDKSwift.EarnEvmApprovalData, b: DynamicSDKSwift.EarnEvmApprovalData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnEvmTransactionData : Swift.Codable, Swift.Equatable {
+  public let to: Swift.String
+  public let data: Swift.String
+  public let value: Swift.String
+  public let gasLimit: Swift.String?
+  public let gasPrice: Swift.String?
+  public let maxFeePerGas: Swift.String?
+  public let maxPriorityFeePerGas: Swift.String?
+  public let nonce: Swift.Int?
+  public init(to: Swift.String, data: Swift.String, value: Swift.String, gasLimit: Swift.String? = nil, gasPrice: Swift.String? = nil, maxFeePerGas: Swift.String? = nil, maxPriorityFeePerGas: Swift.String? = nil, nonce: Swift.Int? = nil)
+  public static func == (a: DynamicSDKSwift.EarnEvmTransactionData, b: DynamicSDKSwift.EarnEvmTransactionData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum EarnExecutionStep : Swift.String, Swift.Codable, Swift.CaseIterable, Swift.Equatable {
+  case approval
+  case transaction
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [DynamicSDKSwift.EarnExecutionStep]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [DynamicSDKSwift.EarnExecutionStep] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct EarnSigningPayload : Swift.Codable, Swift.Equatable {
+  public let chainId: Swift.String
+  public let chainName: DynamicSDKSwift.ChainEnum
+  public let evmTransaction: DynamicSDKSwift.EarnEvmTransactionData?
+  public let evmApproval: DynamicSDKSwift.EarnEvmApprovalData?
+  public init(chainId: Swift.String, chainName: DynamicSDKSwift.ChainEnum, evmTransaction: DynamicSDKSwift.EarnEvmTransactionData? = nil, evmApproval: DynamicSDKSwift.EarnEvmApprovalData? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public static func == (a: DynamicSDKSwift.EarnSigningPayload, b: DynamicSDKSwift.EarnSigningPayload) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct EarnVaultActionRequest : Swift.Codable, Swift.Equatable {
+  public let ownerAddress: Swift.String
+  public let amount: Swift.String
+  public let receiverAddress: Swift.String?
+  public init(ownerAddress: Swift.String, amount: Swift.String, receiverAddress: Swift.String? = nil)
+  public static func == (a: DynamicSDKSwift.EarnVaultActionRequest, b: DynamicSDKSwift.EarnVaultActionRequest) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultActionResponse : Swift.Codable, Swift.Equatable {
+  public let vaultId: Swift.String
+  public let signingPayload: DynamicSDKSwift.EarnSigningPayload
+  public init(vaultId: Swift.String, signingPayload: DynamicSDKSwift.EarnSigningPayload)
+  public static func == (a: DynamicSDKSwift.EarnVaultActionResponse, b: DynamicSDKSwift.EarnVaultActionResponse) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultClaimRequest : Swift.Codable, Swift.Equatable {
+  public let ownerAddress: Swift.String
+  public init(ownerAddress: Swift.String)
+  public static func == (a: DynamicSDKSwift.EarnVaultClaimRequest, b: DynamicSDKSwift.EarnVaultClaimRequest) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultDetails : Swift.Codable, Swift.Equatable {
+  public let vaultId: Swift.String
+  public let curator: Swift.String
+  public let assetSymbol: Swift.String
+  public let assetAddress: Swift.String
+  public let chainId: Swift.Int
+  public let assetDecimals: Swift.Int
+  public let contractAddress: Swift.String
+  public let isFeeWrapper: Swift.Bool
+  public let netApy: Swift.Double?
+  public let tvlUsd: Swift.Double?
+  public let netApyExcludingRewards: Swift.Double?
+  public let tvlRaw: Swift.String?
+  public init(vaultId: Swift.String, curator: Swift.String, assetSymbol: Swift.String, assetAddress: Swift.String, chainId: Swift.Int, assetDecimals: Swift.Int, contractAddress: Swift.String, isFeeWrapper: Swift.Bool, netApy: Swift.Double? = nil, tvlUsd: Swift.Double? = nil, netApyExcludingRewards: Swift.Double? = nil, tvlRaw: Swift.String? = nil)
+  public static func == (a: DynamicSDKSwift.EarnVaultDetails, b: DynamicSDKSwift.EarnVaultDetails) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultPosition : Swift.Codable, Swift.Equatable {
+  public let vaultId: Swift.String
+  public let ownerAddress: Swift.String
+  public let shares: Swift.String
+  public let assets: Swift.String
+  public init(vaultId: Swift.String, ownerAddress: Swift.String, shares: Swift.String, assets: Swift.String)
+  public static func == (a: DynamicSDKSwift.EarnVaultPosition, b: DynamicSDKSwift.EarnVaultPosition) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultReward : Swift.Codable, Swift.Equatable {
+  public let accrued: Swift.String
+  public let tokenAddress: Swift.String
+  public let tokenDecimals: Swift.Int
+  public let tokenSymbol: Swift.String
+  public init(accrued: Swift.String, tokenAddress: Swift.String, tokenDecimals: Swift.Int, tokenSymbol: Swift.String)
+  public static func == (a: DynamicSDKSwift.EarnVaultReward, b: DynamicSDKSwift.EarnVaultReward) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EarnVaultSummary : Swift.Codable, Swift.Equatable {
+  public let vaultId: Swift.String
+  public let curator: Swift.String
+  public let assetSymbol: Swift.String
+  public let assetAddress: Swift.String
+  public let chainId: Swift.Int
+  public let netApy: Swift.Double?
+  public let tvlUsd: Swift.Double?
+  public init(vaultId: Swift.String, curator: Swift.String, assetSymbol: Swift.String, assetAddress: Swift.String, chainId: Swift.Int, netApy: Swift.Double? = nil, tvlUsd: Swift.Double? = nil)
+  public static func == (a: DynamicSDKSwift.EarnVaultSummary, b: DynamicSDKSwift.EarnVaultSummary) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum EmbeddedWalletChain : Swift.String, Swift.CaseIterable, Swift.Codable {
   case evm
   case sol
@@ -622,6 +756,14 @@ public struct EthereumTransaction {
   public let nonce: Swift.Int?
   public init(from: Swift.String, to: Swift.String? = nil, value: SwiftBigInt.BigUInt? = nil, data: Swift.String? = nil, gas: SwiftBigInt.BigUInt? = nil, gasPrice: SwiftBigInt.BigUInt? = nil, maxFeePerGas: SwiftBigInt.BigUInt? = nil, maxPriorityFeePerGas: SwiftBigInt.BigUInt? = nil, nonce: Swift.Int? = nil)
   public func toJsonRpc() -> [Swift.String : Any]
+}
+public struct EvmTransactionReceipt : Swift.Equatable {
+  public let transactionHash: Swift.String
+  public let succeeded: Swift.Bool
+  public let blockNumber: SwiftBigInt.BigUInt?
+  public let gasUsed: SwiftBigInt.BigUInt?
+  public init(transactionHash: Swift.String, succeeded: Swift.Bool, blockNumber: SwiftBigInt.BigUInt? = nil, gasUsed: SwiftBigInt.BigUInt? = nil)
+  public static func == (a: DynamicSDKSwift.EvmTransactionReceipt, b: DynamicSDKSwift.EvmTransactionReceipt) -> Swift.Bool
 }
 public struct FetchArg : Swift.Codable {
   public let method: Swift.String
@@ -2198,6 +2340,61 @@ final public class DeviceRegistrationModule {
   final public func revokeAllRegisteredDevices() async throws
   @objc deinit
 }
+public struct EarnError : Swift.Error, Foundation.LocalizedError, Swift.Equatable {
+  public let message: Swift.String
+  public let statusCode: Swift.Int?
+  public var nothingToClaim: Swift.Bool {
+    get
+  }
+  public init(message: Swift.String, statusCode: Swift.Int? = nil)
+  public static func fromStatusCode(_ statusCode: Swift.Int) -> DynamicSDKSwift.EarnError
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: DynamicSDKSwift.EarnError, b: DynamicSDKSwift.EarnError) -> Swift.Bool
+}
+public protocol EarnEvmTransactionSender {
+  func sendTransaction(transaction: DynamicSDKSwift.EthereumTransaction, wallet: DynamicSDKSwift.BaseWallet) async throws -> Swift.String
+  func writeContract(wallet: DynamicSDKSwift.BaseWallet, input: DynamicSDKSwift.WriteContractInput) async throws -> Swift.String
+}
+extension DynamicSDKSwift.EvmModule : DynamicSDKSwift.EarnEvmTransactionSender {
+}
+public typealias EarnTransactionReceiptLookup = (_ chainId: Swift.Int, _ transactionHash: Swift.String) async throws -> DynamicSDKSwift.EvmTransactionReceipt?
+@_hasMissingDesignatedInitializers final public class EarnEvmExecutor {
+  convenience public init(evm: DynamicSDKSwift.EvmModule, receiptPollInterval: Foundation.TimeInterval = 2, receiptTimeout: Foundation.TimeInterval = 120)
+  final public func execute(payload: DynamicSDKSwift.EarnSigningPayload, wallet: DynamicSDKSwift.BaseWallet, onStepChange: ((DynamicSDKSwift.EarnExecutionStep) -> Swift.Void)? = nil) async throws -> Swift.String
+  @objc deinit
+}
+public protocol EarnHttpClient {
+  func sendRequest(_ request: Foundation.URLRequest) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+}
+extension Foundation.URLSession : DynamicSDKSwift.EarnHttpClient {
+  public func sendRequest(_ request: Foundation.URLRequest) async throws -> (Foundation.Data, Foundation.HTTPURLResponse)
+}
+final public class EarnService {
+  public static let defaultApiBaseUrl: Swift.String
+  public init(environmentId: Swift.String, apiBaseUrl: Swift.String? = nil, httpClient: any DynamicSDKSwift.EarnHttpClient = URLSession.shared)
+  final public func getVaults() async throws -> [DynamicSDKSwift.EarnVaultSummary]
+  final public func getVaultDetails(vaultId: Swift.String) async throws -> DynamicSDKSwift.EarnVaultDetails
+  final public func getVaultPosition(vaultId: Swift.String, ownerAddress: Swift.String) async throws -> DynamicSDKSwift.EarnVaultPosition
+  final public func getVaultRewards(vaultId: Swift.String, ownerAddress: Swift.String) async throws -> [DynamicSDKSwift.EarnVaultReward]
+  final public func deposit(vaultId: Swift.String, request: DynamicSDKSwift.EarnVaultActionRequest) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  final public func withdraw(vaultId: Swift.String, request: DynamicSDKSwift.EarnVaultActionRequest) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  final public func claim(vaultId: Swift.String, request: DynamicSDKSwift.EarnVaultClaimRequest) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EarnModule {
+  convenience public init(props: DynamicSDKSwift.ClientProps, evm: DynamicSDKSwift.EvmModule)
+  final public func getVaults() async throws -> [DynamicSDKSwift.EarnVaultSummary]
+  final public func getVaultDetails(vaultId: Swift.String) async throws -> DynamicSDKSwift.EarnVaultDetails
+  final public func getVaultPosition(vaultId: Swift.String, ownerAddress: Swift.String) async throws -> DynamicSDKSwift.EarnVaultPosition
+  final public func getVaultRewards(vaultId: Swift.String, ownerAddress: Swift.String) async throws -> [DynamicSDKSwift.EarnVaultReward]
+  final public func deposit(vaultId: Swift.String, ownerAddress: Swift.String, amount: Swift.String, receiverAddress: Swift.String? = nil) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  final public func withdraw(vaultId: Swift.String, ownerAddress: Swift.String, amount: Swift.String, receiverAddress: Swift.String? = nil) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  final public func claim(vaultId: Swift.String, ownerAddress: Swift.String) async throws -> DynamicSDKSwift.EarnVaultActionResponse
+  final public func execute(payload: DynamicSDKSwift.EarnSigningPayload, wallet: DynamicSDKSwift.BaseWallet, onStepChange: ((DynamicSDKSwift.EarnExecutionStep) -> Swift.Void)? = nil) async throws -> Swift.String
+  @objc deinit
+}
 final public class EmbeddedWalletsModule {
   public static let messageType: Swift.String
   public static let prefix: Swift.String
@@ -2610,6 +2807,8 @@ extension DynamicSDKSwift.ChainEnum : Swift.RawRepresentable {}
 extension DynamicSDKSwift.DelegationStatus : Swift.Equatable {}
 extension DynamicSDKSwift.DelegationStatus : Swift.Hashable {}
 extension DynamicSDKSwift.DelegationStatus : Swift.RawRepresentable {}
+extension DynamicSDKSwift.EarnExecutionStep : Swift.Hashable {}
+extension DynamicSDKSwift.EarnExecutionStep : Swift.RawRepresentable {}
 extension DynamicSDKSwift.EmbeddedWalletChain : Swift.Equatable {}
 extension DynamicSDKSwift.EmbeddedWalletChain : Swift.Hashable {}
 extension DynamicSDKSwift.EmbeddedWalletChain : Swift.RawRepresentable {}
