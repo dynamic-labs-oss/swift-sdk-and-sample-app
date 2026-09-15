@@ -189,6 +189,8 @@ struct WalletDetailsScreen: View {
           TonActionsView(wallet: wallet)
         } else if wallet.chain.uppercased() == "BTC" {
           BitcoinActionsView(wallet: wallet)
+        } else if wallet.chain.uppercased() == "STELLAR" {
+          StellarActionsView(wallet: wallet)
         }
         
         Spacer()
@@ -365,6 +367,15 @@ struct EVMActionsView: View {
         )
       }
       .padding(.horizontal)
+
+      // Earn
+      NavigationLink(destination: EarnScreen(wallet: wallet)) {
+              WalletActionButton(
+          icon: "chart.line.uptrend.xyaxis",
+          title: "Earn (Yield Vaults)"
+        )
+      }
+      .padding(.horizontal)
     }
     .padding(.vertical)
   }
@@ -529,6 +540,52 @@ struct BitcoinActionsView: View {
         WalletActionButton(
           icon: "signature",
           title: "Sign PSBT"
+        )
+      }
+      .padding(.horizontal)
+    }
+    .padding(.vertical)
+  }
+}
+
+struct StellarActionsView: View {
+  let wallet: BaseWallet
+
+  var body: some View {
+    VStack(alignment: .leading, spacing: 12) {
+      Text("Stellar Actions")
+        .font(.title2)
+        .fontWeight(.bold)
+        .padding(.horizontal)
+
+      NavigationLink(destination: StellarSignMessageScreen(wallet: wallet)) {
+        WalletActionButton(
+          icon: "pencil.circle",
+          title: "Sign Message"
+        )
+      }
+      .padding(.horizontal)
+
+      NavigationLink(destination: StellarSignTransactionScreen(wallet: wallet)) {
+        WalletActionButton(
+          icon: "signature",
+          title: "Sign Transaction"
+        )
+      }
+      .padding(.horizontal)
+
+      NavigationLink(destination: StellarSendBalanceScreen(wallet: wallet)) {
+        WalletActionButton(
+          icon: "paperplane.fill",
+          title: "Send Balance"
+        )
+      }
+      .padding(.horizontal)
+
+      NavigationLink(destination: StellarAddTrustlineScreen(wallet: wallet)) {
+        WalletActionButton(
+          icon: "arrow.right.arrow.left",
+          title: "Add Trustline"
         )
       }
       .padding(.horizontal)
