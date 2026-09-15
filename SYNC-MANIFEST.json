@@ -1,0 +1,15 @@
+{
+  "sourceRepo": "sdk-swift-with-webview",
+  "sourceCommit": "9040cd8e6a1c71fb249125a22ceed10d19f3e765",
+  "sourceBranch": "main",
+  "version": "1.4.2",
+  "sourceDirty": false,
+  "generatedAtUtc": "2026-09-15T14:36:21Z",
+  "xcframeworkSha256": {
+    "AnyCodableSwift.xcframework": "c92250af5f31c0968b76dad0d4abd9657283c63ea6cbebbc0c039435a52851ee",
+    "DynamicSDKSwift.xcframework": "f10b3d7f37f2bc0ae8321e6e9f3234a978f91bf46be34253093532a7edac9340",
+    "SolanaWeb3.xcframework": "1df9c35301937865e84d2ab9c19043e4caedf9b1b18b48e757903b6456d9942e",
+    "SwiftBigInt.xcframework": "d39c8e583039373caaed829c25d2fed886d8f8b52ff334135386c56153ca71c8"
+  },
+  "smokeBuildPassed": true
+}
