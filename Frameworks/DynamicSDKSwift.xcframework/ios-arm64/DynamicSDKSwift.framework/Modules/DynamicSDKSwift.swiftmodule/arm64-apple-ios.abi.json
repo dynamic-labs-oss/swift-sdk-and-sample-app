@@ -104786,7 +104786,7 @@
       "kind": "StringLiteral",
       "offset": 90,
       "length": 7,
-      "value": "\"5.8.0\""
+      "value": "\"5.9.0\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
