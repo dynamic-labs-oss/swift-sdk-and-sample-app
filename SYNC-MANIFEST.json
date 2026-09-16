@@ -1,15 +1,15 @@
 {
   "sourceRepo": "sdk-swift-with-webview",
-  "sourceCommit": "aab295effb1b793a5d8c9acacc6c4349cebfb0a2",
+  "sourceCommit": "0e184b7f248c437c8022bdd1878957775d088d88",
   "sourceBranch": "main",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "sourceDirty": false,
-  "generatedAtUtc": "2026-09-15T17:57:07Z",
+  "generatedAtUtc": "2026-09-16T16:19:03Z",
   "xcframeworkSha256": {
-    "AnyCodableSwift.xcframework": "1604e85f36ee988a3e09133a5a37d885ecbaaccf27d498f58b4ee94e86f4dbb4",
-    "DynamicSDKSwift.xcframework": "15bf600d15efbb629ab50bcc30f4ea91250537da32288f42d4c9abca1df94a66",
-    "SolanaWeb3.xcframework": "8317f185aa3560fbcf96d3ec662255ea54f3b477d8b850074c5132e64d644c8a",
-    "SwiftBigInt.xcframework": "66d0c1c4c326f5d8f4d89fd6b265d121bf6179822e3ae0d3f4091a16eb181d24"
+    "AnyCodableSwift.xcframework": "b75ff47a4d681e39dfe44c99585a6a1fa43124e35b0f25c9b7d51ff92e614838",
+    "DynamicSDKSwift.xcframework": "336d5e3155dabc186614522504cb31c6c65d4110c27ffb7e4e9ebd07a0fbc4e9",
+    "SolanaWeb3.xcframework": "795303e3d8f506516631790dfa02678a893e715c09c3b427277c93f8ada59879",
+    "SwiftBigInt.xcframework": "56db142659846f71b57808a4ccd4ed1b4c3ad7e83024547861fce5d9be89f3c1"
   },
   "smokeBuildPassed": true
 }
