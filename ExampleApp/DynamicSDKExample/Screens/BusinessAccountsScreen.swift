@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 import DynamicSDKSwift
 
 // Business Accounts sample screen.
@@ -67,7 +68,10 @@ struct BusinessAccountsScreen: View {
     }
     .navigationTitle("Business Accounts")
     .navigationBarTitleDisplayMode(.inline)
-    .onAppear { Task { await vm.loadAccounts() } }
+    .onAppear {
+      vm.loadMyWallets()
+      Task { await vm.loadAccounts() }
+    }
     .refreshable { await vm.loadAccounts() }
     .alert(vm.alertTitle ?? "", isPresented: Binding(
       get: { vm.alertTitle != nil },
@@ -179,6 +183,7 @@ struct BusinessAccountsScreen: View {
       renameSection()
       walletsSection(detail)
       addWalletSection()
+      reproLinkWalletSection()
       membersSection(detail)
       addMemberSection()
       signersSection(detail)
@@ -271,6 +276,21 @@ struct BusinessAccountsScreen: View {
           .font(.headline)
           .fontWeight(.bold)
 
+        if !vm.myWallets.isEmpty {
+          Picker("My wallets", selection: $addWalletId) {
+            Text("Pick one of your wallets").tag("")
+            ForEach(vm.myWallets, id: \.id) { wallet in
+              if let id = wallet.id {
+                Text("\(wallet.chain) - \(short(id))").tag(id)
+              }
+            }
+          }
+          .pickerStyle(.menu)
+          Text("These come from createWallet (Home screen) — creating a wallet does NOT link it to a business account; linking is the separate step below.")
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
+
         TextFieldWithLabel(label: "Wallet ID", placeholder: "wallet id to link", text: $addWalletId)
 
         PrimaryButton(
@@ -279,6 +299,58 @@ struct BusinessAccountsScreen: View {
           isLoading: vm.isLoading,
           isDisabled: addWalletId.trimmed.isEmpty
         )
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func reproLinkWalletSection() -> some View {
+    CardContainer {
+      VStack(alignment: .leading, spacing: 12) {
+        Text("Repro: client link-wallet hang")
+          .font(.headline)
+          .fontWeight(.bold)
+        Text("Reproduces the reported businessAccounts.addWallet hang using the wallet ID above.")
+          .font(.caption)
+          .foregroundColor(.secondary)
+
+        if let stepUpRequired = vm.stepUpRequired {
+          InfoRow(label: "Step-up required", value: stepUpRequired ? "Yes" : "No")
+        }
+
+        HStack {
+          PrimaryButton(
+            title: "1. Check step-up",
+            action: { Task { await vm.checkLinkWalletStepUp() } },
+            isLoading: vm.isCheckingStepUp,
+            isDisabled: false
+          )
+          PrimaryButton(
+            title: "2. Prompt step-up",
+            action: { Task { await vm.promptLinkWalletStepUp() } },
+            isLoading: vm.isPromptingStepUp,
+            isDisabled: false
+          )
+        }
+
+        PrimaryButton(
+          title: "3. Link wallet (repro)",
+          action: { Task { await vm.reproLinkWallet(walletId: addWalletId) } },
+          isLoading: vm.isReproRunning,
+          isDisabled: addWalletId.trimmed.isEmpty
+        )
+
+        if vm.isReproRunning {
+          Text("Pending for \(vm.reproElapsedSeconds)s…")
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
+
+        if let status = vm.reproStatus {
+          Text(status)
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
       }
     }
   }
@@ -658,6 +730,17 @@ final class BusinessAccountsViewModel: ObservableObject {
   @Published var confirmMessage: String = ""
   private var pendingConfirmAction: (() async -> Void)?
 
+  // Repro: client link-wallet hang
+  @Published var myWallets: [BaseWallet] = []
+  @Published var stepUpRequired: Bool?
+  @Published var isCheckingStepUp: Bool = false
+  @Published var isPromptingStepUp: Bool = false
+  @Published var isReproRunning: Bool = false
+  @Published var reproElapsedSeconds: Int = 0
+  @Published var reproStatus: String?
+  private var cancellables = Set<AnyCancellable>()
+  private var isSubscribedToWalletChanges = false
+
   private let sdk = DynamicSDK.instance()
 
   func loadAccounts(externalRefs: [String]? = nil) async {
@@ -752,6 +835,77 @@ final class BusinessAccountsViewModel: ObservableObject {
     } catch {
       showError("Failed to remove wallet: \(error)")
     }
+  }
+
+  /// Loads the caller's own embedded wallets (from `createWallet`, e.g. on the
+  /// Home screen) so a real walletId is available to link — these are a
+  /// separate list from the business account's own `wallets`.
+  func loadMyWallets() {
+    myWallets = sdk.wallets.userWallets
+    guard !isSubscribedToWalletChanges else { return }
+    isSubscribedToWalletChanges = true
+    sdk.wallets.userWalletsChanges
+      .receive(on: DispatchQueue.main)
+      .sink { [weak self] wallets in
+        self?.myWallets = wallets
+      }
+      .store(in: &cancellables)
+  }
+
+  func checkLinkWalletStepUp() async {
+    isCheckingStepUp = true
+    defer { isCheckingStepUp = false }
+
+    do {
+      stepUpRequired = try await sdk.stepUpAuth.isStepUpRequired(scope: .businessAccountLinkWallet)
+    } catch {
+      showError("Failed to check step-up: \(error)")
+    }
+  }
+
+  func promptLinkWalletStepUp() async {
+    isPromptingStepUp = true
+    defer { isPromptingStepUp = false }
+
+    do {
+      _ = try await sdk.stepUpAuth.promptStepUpAuth(requestedScopes: [.businessAccountLinkWallet])
+      await checkLinkWalletStepUp()
+    } catch {
+      showError("Failed to prompt step-up: \(error)")
+    }
+  }
+
+  /// Calls the real `businessAccounts.addWallet` (no mocks) and reports elapsed
+  /// time while it's pending. The request is bounded by `RequestChannel`'s 30s
+  /// timeout, so if the webview never sends a resolve/reject the call rejects
+  /// with `DynamicSDKError.timeout` instead of hanging forever.
+  func reproLinkWallet(walletId: String) async {
+    guard let id = selectedAccountId else { return }
+    isReproRunning = true
+    reproElapsedSeconds = 0
+    reproStatus = "Pending…"
+
+    let watchdog = Task {
+      while !Task.isCancelled {
+        try? await Task.sleep(nanoseconds: 1_000_000_000)
+        guard !Task.isCancelled else { return }
+        self.reproElapsedSeconds += 1
+        if self.reproElapsedSeconds == 15 {
+          self.reproStatus = "⏳ still pending after 15s with no resolve/reject — reproduces the reported hang"
+        }
+      }
+    }
+
+    do {
+      let result = try await sdk.businessAccounts.addWallet(businessAccountId: id, walletId: walletId)
+      watchdog.cancel()
+      detail = result
+      reproStatus = "✅ resolved after \(reproElapsedSeconds)s"
+    } catch {
+      watchdog.cancel()
+      reproStatus = "❌ rejected after \(reproElapsedSeconds)s: \(error)"
+    }
+    isReproRunning = false
   }
 
   func addMember(
