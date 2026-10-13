@@ -102972,6 +102972,158 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "WaasPasswordOverride",
+        "printedName": "WaasPasswordOverride",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "walletId",
+            "printedName": "walletId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV8walletIdSSvp",
+            "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV8walletIdSSvp",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV8walletIdSSvg",
+                "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV8walletIdSSvg",
+                "moduleName": "DynamicSDKSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "existingPassword",
+            "printedName": "existingPassword",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV08existingD0SSvp",
+            "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV08existingD0SSvp",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV08existingD0SSvg",
+                "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV08existingD0SSvg",
+                "moduleName": "DynamicSDKSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(walletId:existingPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WaasPasswordOverride",
+                "printedName": "DynamicSDKSwift.WaasPasswordOverride",
+                "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV8walletId08existingD0ACSS_SStcfc",
+            "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV8walletId08existingD0ACSS_SStcfc",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV",
+        "mangledName": "$s15DynamicSDKSwift20WaasPasswordOverrideV",
+        "moduleName": "DynamicSDKSwift",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "WaasModule",
         "printedName": "WaasModule",
         "children": [
@@ -103275,7 +103427,7 @@
           {
             "kind": "Function",
             "name": "updatePassword",
-            "printedName": "updatePassword(wallet:existingPassword:newPassword:)",
+            "printedName": "updatePassword(wallet:existingPassword:newPassword:passwordOverrides:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -103299,11 +103451,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[DynamicSDKSwift.WaasPasswordOverride]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WaasPasswordOverride",
+                    "printedName": "DynamicSDKSwift.WaasPasswordOverride",
+                    "usr": "s:15DynamicSDKSwift20WaasPasswordOverrideV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift10WaasModuleC14updatePassword6wallet08existingF003newF0yAA10BaseWalletV_S2StYaKF",
-            "mangledName": "$s15DynamicSDKSwift10WaasModuleC14updatePassword6wallet08existingF003newF0yAA10BaseWalletV_S2StYaKF",
+            "usr": "s:15DynamicSDKSwift10WaasModuleC14updatePassword6wallet08existingF003newF017passwordOverridesyAA10BaseWalletV_S2SSayAA0cF8OverrideVGtYaKF",
+            "mangledName": "$s15DynamicSDKSwift10WaasModuleC14updatePassword6wallet08existingF003newF017passwordOverridesyAA10BaseWalletV_S2SSayAA0cF8OverrideVGtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -113517,6 +113684,13 @@
       "offset": 8708,
       "length": 10,
       "value": "\"registry\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WaasModule.swift",
+      "kind": "Array",
+      "offset": 5993,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WalletConnectModule.swift",
