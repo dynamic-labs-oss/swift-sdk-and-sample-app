@@ -2719,6 +2719,11 @@ final public class UserInterfaceModule {
   final public func revealEmbeddedWalletPrivateKey() async throws
   @objc deinit
 }
+public struct WaasPasswordOverride {
+  public let walletId: Swift.String
+  public let existingPassword: Swift.String
+  public init(walletId: Swift.String, existingPassword: Swift.String)
+}
 final public class WaasModule {
   final public let delegation: DynamicSDKSwift.DelegationModule
   public init(_ transport: DynamicSDKSwift.MessageTransport)
@@ -2726,7 +2731,7 @@ final public class WaasModule {
   final public func unlockWallet(wallet: DynamicSDKSwift.BaseWallet, password: Swift.String? = nil) async throws
   final public func lockWallets() async throws
   final public func lockWallet(walletId: Swift.String) async throws
-  final public func updatePassword(wallet: DynamicSDKSwift.BaseWallet, existingPassword: Swift.String, newPassword: Swift.String) async throws
+  final public func updatePassword(wallet: DynamicSDKSwift.BaseWallet, existingPassword: Swift.String, newPassword: Swift.String, passwordOverrides: [DynamicSDKSwift.WaasPasswordOverride] = []) async throws
   final public func setPassword(wallet: DynamicSDKSwift.BaseWallet, newPassword: Swift.String) async throws
   final public func getWalletRecoveryState(wallet: DynamicSDKSwift.BaseWallet) async throws -> DynamicSDKSwift.WalletRecoveryState
   final public func createOfflineRecoveryShares(wallet: DynamicSDKSwift.BaseWallet, password: Swift.String? = nil, cloudProviderAccessToken: Swift.String? = nil, mfaToken: Swift.String? = nil, recoveryEncryptionPublicKey: Swift.String? = nil) async throws
