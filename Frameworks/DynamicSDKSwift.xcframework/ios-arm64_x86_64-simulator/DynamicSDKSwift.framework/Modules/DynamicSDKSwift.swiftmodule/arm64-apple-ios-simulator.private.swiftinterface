@@ -132,6 +132,19 @@ public struct TonNetworkDetails {
   public let name: Swift.String
   public init(chainId: Swift.Int, name: Swift.String)
 }
+final public class TronModule {
+  public init(_ transport: DynamicSDKSwift.MessageTransport)
+  final public func signMessage(walletId: Swift.String, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func sendBalance(walletId: Swift.String, toAddress: Swift.String, amount: Swift.String, tokenAddress: Swift.String? = nil, tokenDecimals: Swift.Int? = nil) async throws -> Swift.String
+  final public func getBalance(walletId: Swift.String) async throws -> Swift.String
+  final public func getNetworkDetails(walletId: Swift.String) async throws -> DynamicSDKSwift.TronNetworkDetails
+  @objc deinit
+}
+public struct TronNetworkDetails {
+  public let chainId: Swift.String
+  public let name: Swift.String
+  public init(chainId: Swift.String, name: Swift.String)
+}
 public enum WebViewVersion {
   public static let current: Swift.String
 }
@@ -365,6 +378,7 @@ final public class VisibilityModule {
   final public let bitcoin: DynamicSDKSwift.BitcoinModule
   final public let ton: DynamicSDKSwift.TonModule
   final public let stellar: DynamicSDKSwift.StellarModule
+  final public let tron: DynamicSDKSwift.TronModule
   final public let deviceRegistration: DynamicSDKSwift.DeviceRegistrationModule
   final public let walletConnect: DynamicSDKSwift.WalletConnectModule
   final public let businessAccounts: DynamicSDKSwift.BusinessAccountsModule
@@ -802,6 +816,7 @@ public enum EmbeddedWalletChain : Swift.String, Swift.CaseIterable, Swift.Codabl
   case sui
   case ton
   case btc
+  case tron
   public init?(rawValue: Swift.String)
   public typealias AllCases = [DynamicSDKSwift.EmbeddedWalletChain]
   public typealias RawValue = Swift.String
