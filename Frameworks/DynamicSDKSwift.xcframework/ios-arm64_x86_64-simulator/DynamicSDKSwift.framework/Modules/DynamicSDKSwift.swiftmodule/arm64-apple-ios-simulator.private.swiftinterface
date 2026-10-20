@@ -24,9 +24,9 @@ import os
 import ObjectiveC.runtime
 final public class BitcoinModule {
   public init(_ transport: DynamicSDKSwift.MessageTransport)
-  final public func signMessage(walletId: Swift.String, message: Swift.String, protocol signingProtocol: Swift.String? = nil, addressType: Swift.String? = nil) async throws -> Swift.String
-  final public func signPsbt(walletId: Swift.String, request psbtRequest: [Swift.String : Any]) async throws -> Swift.String
-  final public func signPsbts(walletId: Swift.String, requests: [[Swift.String : Any]]) async throws -> [Swift.String]
+  final public func signMessage(walletId: Swift.String, message: Swift.String, protocol signingProtocol: Swift.String? = nil, addressType: Swift.String? = nil, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signPsbt(walletId: Swift.String, request psbtRequest: [Swift.String : Any], approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signPsbts(walletId: Swift.String, requests: [[Swift.String : Any]], approvalQuorum: [Swift.String : Any]? = nil) async throws -> [Swift.String]
   final public func sendBitcoin(walletId: Swift.String, recipientAddress: Swift.String, amount: Swift.String, feePriority: Swift.String? = nil) async throws -> Swift.String
   final public func buildPsbt(walletId: Swift.String, recipientAddress: Swift.String, amount: Swift.String, feePriority: Swift.String? = nil) async throws -> Swift.String
   final public func sendRawTransaction(walletId: Swift.String, rawTransaction: Swift.String) async throws -> Swift.String
@@ -55,10 +55,10 @@ final public class EvmModule {
   @objc deinit
 }
 extension DynamicSDKSwift.WalletsModule {
-  final public func signEthereumTransaction(walletId: Swift.String, transaction: DynamicSDKSwift.EthereumTransaction) async throws -> Swift.String
-  final public func signEthereumTransaction(wallet: DynamicSDKSwift.BaseWallet, to: Swift.String, value: Swift.String, gasLimit: Swift.String, maxPriorityFeePerGas: Swift.String, maxFeePerGas: Swift.String) async throws -> Swift.String
-  final public func signTypedData(walletId: Swift.String, typedData: DynamicSDKSwift.TypedData) async throws -> Swift.String
-  final public func signTypedData(wallet: DynamicSDKSwift.BaseWallet, typedDataJson: Swift.String) async throws -> Swift.String
+  final public func signEthereumTransaction(walletId: Swift.String, transaction: DynamicSDKSwift.EthereumTransaction, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signEthereumTransaction(wallet: DynamicSDKSwift.BaseWallet, to: Swift.String, value: Swift.String, gasLimit: Swift.String, maxPriorityFeePerGas: Swift.String, maxFeePerGas: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTypedData(walletId: Swift.String, typedData: DynamicSDKSwift.TypedData, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTypedData(wallet: DynamicSDKSwift.BaseWallet, typedDataJson: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
 }
 public enum SolanaTransactionType : Swift.String {
   case versioned
@@ -71,11 +71,11 @@ public enum SolanaTransactionType : Swift.String {
 }
 final public class DynamicSolanaSigner {
   public init(requestChannel: DynamicSDKSwift.RequestChannel, wallet: DynamicSDKSwift.BaseWallet)
-  final public func signMessage(message: Swift.String) async throws -> Swift.String
+  final public func signMessage(message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   final public func signAndSendEncodedTransaction(base64Transaction: Swift.String, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned) async throws -> Swift.String
   final public func signAndSendTransaction(serializedTransaction: Foundation.Data, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned) async throws -> Swift.String
-  final public func signEncodedTransaction(base64Transaction: Swift.String, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned) async throws -> Swift.String
-  final public func signTransaction(serializedTransaction: SolanaWeb3.Transaction, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned) async throws -> Swift.String
+  final public func signEncodedTransaction(base64Transaction: Swift.String, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTransaction(serializedTransaction: SolanaWeb3.Transaction, transactionType: DynamicSDKSwift.SolanaTransactionType = .versioned, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   @objc deinit
 }
 final public class SolanaModule {
@@ -94,8 +94,8 @@ public struct BlockhashWithExpiryBlockHeight {
 }
 final public class StellarModule {
   public init(_ transport: DynamicSDKSwift.MessageTransport)
-  final public func signMessage(walletId: Swift.String, message: Swift.String) async throws -> Swift.String
-  final public func signTransaction(walletId: Swift.String, transactionXdr: Swift.String) async throws -> Swift.String
+  final public func signMessage(walletId: Swift.String, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTransaction(walletId: Swift.String, transactionXdr: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   final public func sendBalance(walletId: Swift.String, toAddress: Swift.String, amount: Swift.String, tokenAddress: Swift.String? = nil, tokenDecimals: Swift.Int? = nil) async throws -> Swift.String
   final public func addTrustline(walletId: Swift.String, assetCode: Swift.String, assetIssuer: Swift.String, limit: Swift.String? = nil) async throws -> Swift.String
   final public func getBalance(walletId: Swift.String, assetCode: Swift.String? = nil, assetIssuer: Swift.String? = nil) async throws -> Swift.String
@@ -104,9 +104,9 @@ final public class StellarModule {
 }
 final public class SuiModule {
   public init(_ transport: DynamicSDKSwift.MessageTransport)
-  final public func signMessage(walletId: Swift.String, message: Swift.String) async throws -> Swift.String
-  final public func signTransaction(walletId: Swift.String, transaction: Swift.String) async throws -> Swift.String
-  final public func signTransferTransaction(walletId: Swift.String, to: Swift.String, value: Swift.String, gasPrice: Swift.Int? = nil, gasBudget: Swift.Int? = nil) async throws -> Swift.String
+  final public func signMessage(walletId: Swift.String, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTransaction(walletId: Swift.String, transaction: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signTransferTransaction(walletId: Swift.String, to: Swift.String, value: Swift.String, gasPrice: Swift.Int? = nil, gasBudget: Swift.Int? = nil, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   final public func sendTransaction(walletId: Swift.String, transaction: Swift.String) async throws -> Swift.String
   final public func signAndSendTransaction(walletId: Swift.String, transaction: Swift.String) async throws -> Swift.String
   final public func signAndSendTransferTransaction(walletId: Swift.String, to: Swift.String, value: Swift.String, gasPrice: Swift.Int? = nil, gasBudget: Swift.Int? = nil) async throws -> Swift.String
@@ -115,7 +115,7 @@ final public class SuiModule {
 }
 final public class TonModule {
   public init(_ transport: DynamicSDKSwift.MessageTransport)
-  final public func signMessage(walletId: Swift.String, message: Swift.String) async throws -> Swift.String
+  final public func signMessage(walletId: Swift.String, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   final public func sendTon(walletId: Swift.String, to: Swift.String, amount: Swift.String, comment: Swift.String? = nil) async throws -> DynamicSDKSwift.TonTransactionResult
   final public func sendJetton(walletId: Swift.String, to: Swift.String, amount: Swift.String, jettonMasterAddress: Swift.String, comment: Swift.String? = nil) async throws -> DynamicSDKSwift.TonTransactionResult
   final public func getBalance(walletId: Swift.String) async throws -> Swift.String
@@ -2800,8 +2800,8 @@ final public class WalletsModule {
   }
   final public func getDelegationStatusForWallet(_ walletId: Swift.String) -> DynamicSDKSwift.WalletDelegatedStatus?
   final public func isWalletEligibleForDelegation(_ wallet: DynamicSDKSwift.BaseWallet) -> Swift.Bool
-  final public func signMessage(wallet: DynamicSDKSwift.BaseWallet, message: Swift.String) async throws -> Swift.String
-  final public func signRawMessage(walletId: Swift.String, accountAddress: Swift.String, message: Swift.String, password: Swift.String? = nil) async throws -> Swift.String
+  final public func signMessage(wallet: DynamicSDKSwift.BaseWallet, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func signRawMessage(walletId: Swift.String, accountAddress: Swift.String, message: Swift.String, password: Swift.String? = nil, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
   final public func getBalance(wallet: DynamicSDKSwift.BaseWallet) async throws -> Swift.String
   final public func getNetwork(wallet: DynamicSDKSwift.BaseWallet) async throws -> DynamicSDKSwift.Network
   final public func setPrimary(walletId: Swift.String) async throws

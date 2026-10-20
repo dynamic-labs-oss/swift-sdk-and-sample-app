@@ -188,6 +188,7 @@ struct BusinessAccountsScreen: View {
       addMemberSection()
       signersSection(detail)
       addSignerSection(detail)
+      proposalsSection()
       transferSection()
     }
   }
@@ -557,6 +558,119 @@ struct BusinessAccountsScreen: View {
   }
 
   @ViewBuilder
+  private func proposalsSection() -> some View {
+    CardContainer {
+      VStack(alignment: .leading, spacing: 12) {
+        HStack {
+          Text("Proposals")
+            .font(.headline)
+            .fontWeight(.bold)
+          Spacer()
+          Button("Refresh") {
+            Task { await vm.loadProposals() }
+          }
+          .font(.caption)
+        }
+
+        Text("Signing-quorum proposals: sign an op on a governed wallet, then approve/veto here. Once the quorum is met, Resume runs the op and returns the signature.")
+          .font(.caption)
+          .foregroundColor(.secondary)
+
+        if let awaiting = vm.awaitingProposals, !awaiting.isEmpty {
+          Text("Awaiting my approval (\(awaiting.count))")
+            .font(.subheadline)
+            .fontWeight(.semibold)
+          ForEach(awaiting, id: \.id) { proposal in
+            proposalRow(proposal, showAccount: true)
+          }
+        }
+
+        if let proposals = vm.proposals {
+          if proposals.isEmpty {
+            Text("No proposals on this account")
+              .foregroundColor(.secondary)
+          } else {
+            Text("This account (\(proposals.count))")
+              .font(.subheadline)
+              .fontWeight(.semibold)
+            ForEach(proposals, id: \.id) { proposal in
+              proposalRow(proposal, showAccount: false)
+            }
+          }
+        } else {
+          Text("Loading proposals…")
+            .foregroundColor(.secondary)
+        }
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func proposalRow(_ proposal: BusinessAccountProposal, showAccount: Bool) -> some View {
+    VStack(alignment: .leading, spacing: 6) {
+      HStack {
+        VStack(alignment: .leading, spacing: 4) {
+          Text(proposal.actionType)
+            .font(.subheadline)
+            .fontWeight(.medium)
+          Text("\(short(proposal.id)) · \(proposal.status.rawValue)")
+            .font(.caption)
+            .foregroundColor(.secondary)
+          if showAccount {
+            Text("Account: \(short(proposal.businessAccountId))")
+              .font(.caption)
+              .foregroundColor(.secondary)
+          }
+        }
+        Spacer()
+      }
+
+      if let requirements = proposal.approvalRequirements, !requirements.isEmpty {
+        ForEach(requirements, id: \.requirementId) { requirement in
+          Text("\(requirement.action): \(requirement.approved)/\(requirement.required)\(requirement.satisfied ? " ✓" : "")")
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
+      }
+
+      if proposal.status == .pending {
+        HStack(spacing: 8) {
+          Button("Approve") {
+            Task { await vm.approveProposal(proposal) }
+          }
+          .buttonStyle(.bordered)
+          .tint(.green)
+
+          Button("Veto") {
+            vm.confirm(
+              title: "Veto proposal",
+              message: "Veto proposal \(short(proposal.id)) (\(proposal.actionType))?",
+              action: { Task { await vm.vetoProposal(proposal) } }
+            )
+          }
+          .buttonStyle(.bordered)
+          .tint(.red)
+
+          Button("Withdraw") {
+            Task { await vm.withdrawProposalApproval(proposal) }
+          }
+          .buttonStyle(.bordered)
+        }
+      }
+
+      if proposal.status == .pending || proposal.status == .executed {
+        PrimaryButton(
+          title: "Resume signing",
+          action: { Task { await vm.resumeSigning(proposal) } },
+          isLoading: vm.isLoading,
+          isDisabled: false
+        )
+      }
+    }
+    .padding(.vertical, 4)
+  }
+
+  @ViewBuilder
   private func transferSection() -> some View {
     CardContainer {
       VStack(alignment: .leading, spacing: 12) {
@@ -741,6 +855,9 @@ final class BusinessAccountsViewModel: ObservableObject {
   private var cancellables = Set<AnyCancellable>()
   private var isSubscribedToWalletChanges = false
 
+  @Published var proposals: [BusinessAccountProposal]?
+  @Published var awaitingProposals: [BusinessAccountProposal]?
+
   private let sdk = DynamicSDK.instance()
 
   func loadAccounts(externalRefs: [String]? = nil) async {
@@ -773,6 +890,84 @@ final class BusinessAccountsViewModel: ObservableObject {
     } catch {
       errorMessage = "Failed to load account details: \(error)"
       detail = nil
+    }
+    await loadProposals()
+  }
+
+  func loadProposals() async {
+    do {
+      awaitingProposals = try await sdk.businessAccounts.listProposalsAwaitingMyApproval()
+    } catch {
+      showError("Failed to load proposals awaiting approval: \(error)")
+    }
+    guard let id = selectedAccountId else {
+      proposals = nil
+      return
+    }
+    do {
+      proposals = try await sdk.businessAccounts.listProposals(businessAccountId: id)
+    } catch {
+      showError("Failed to load proposals: \(error)")
+    }
+  }
+
+  func approveProposal(_ proposal: BusinessAccountProposal) async {
+    isLoading = true
+    defer { isLoading = false }
+    do {
+      _ = try await sdk.businessAccounts.approveProposal(
+        businessAccountId: proposal.businessAccountId,
+        proposalId: proposal.id
+      )
+      showSuccess("Proposal approved")
+      await loadProposals()
+    } catch {
+      showError("Failed to approve proposal: \(error)")
+    }
+  }
+
+  func vetoProposal(_ proposal: BusinessAccountProposal) async {
+    isLoading = true
+    defer { isLoading = false }
+    do {
+      _ = try await sdk.businessAccounts.vetoProposal(
+        businessAccountId: proposal.businessAccountId,
+        proposalId: proposal.id
+      )
+      showSuccess("Proposal vetoed")
+      await loadProposals()
+    } catch {
+      showError("Failed to veto proposal: \(error)")
+    }
+  }
+
+  func withdrawProposalApproval(_ proposal: BusinessAccountProposal) async {
+    isLoading = true
+    defer { isLoading = false }
+    do {
+      _ = try await sdk.businessAccounts.withdrawProposalApproval(
+        businessAccountId: proposal.businessAccountId,
+        proposalId: proposal.id
+      )
+      showSuccess("Approval withdrawn")
+      await loadProposals()
+    } catch {
+      showError("Failed to withdraw approval: \(error)")
+    }
+  }
+
+  func resumeSigning(_ proposal: BusinessAccountProposal) async {
+    isLoading = true
+    defer { isLoading = false }
+    do {
+      let signature = try await sdk.businessAccounts.resumeSigningProposal(
+        businessAccountId: proposal.businessAccountId,
+        proposalId: proposal.id
+      )
+      showSuccess("Signature: \(signature)")
+      await loadProposals()
+    } catch {
+      showError("Failed to resume signing proposal: \(error)")
     }
   }
 
