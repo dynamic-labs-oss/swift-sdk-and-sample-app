@@ -53,7 +53,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(walletId:message:protocol:addressType:)",
+            "printedName": "signMessage(walletId:message:protocol:addressType:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -102,11 +102,39 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13BitcoinModuleC11signMessage8walletId7message8protocol11addressTypeS2S_S2SSgAItYaKF",
-            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC11signMessage8walletId7message8protocol11addressTypeS2S_S2SSgAItYaKF",
+            "usr": "s:15DynamicSDKSwift13BitcoinModuleC11signMessage8walletId7message8protocol11addressType14approvalQuorumS2S_S2SSgAJSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC11signMessage8walletId7message8protocol11addressType14approvalQuorumS2S_S2SSgAJSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -119,7 +147,7 @@
           {
             "kind": "Function",
             "name": "signPsbt",
-            "printedName": "signPsbt(walletId:request:)",
+            "printedName": "signPsbt(walletId:request:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -151,11 +179,39 @@
                   }
                 ],
                 "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13BitcoinModuleC8signPsbt8walletId7requestS2S_SDySSypGtYaKF",
-            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC8signPsbt8walletId7requestS2S_SDySSypGtYaKF",
+            "usr": "s:15DynamicSDKSwift13BitcoinModuleC8signPsbt8walletId7request14approvalQuorumS2S_SDySSypGAHSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC8signPsbt8walletId7request14approvalQuorumS2S_SDySSypGAHSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -168,7 +224,7 @@
           {
             "kind": "Function",
             "name": "signPsbts",
-            "printedName": "signPsbts(walletId:requests:)",
+            "printedName": "signPsbts(walletId:requests:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -216,11 +272,39 @@
                   }
                 ],
                 "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13BitcoinModuleC9signPsbts8walletId8requestsSaySSGSS_SaySDySSypGGtYaKF",
-            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC9signPsbts8walletId8requestsSaySSGSS_SaySDySSypGGtYaKF",
+            "usr": "s:15DynamicSDKSwift13BitcoinModuleC9signPsbts8walletId8requests14approvalQuorumSaySSGSS_SaySDySSypGGAISgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13BitcoinModuleC9signPsbts8walletId8requests14approvalQuorumSaySSGSS_SaySDySSypGGAISgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -1346,7 +1430,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(message:)",
+            "printedName": "signMessage(message:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1359,11 +1443,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC11signMessage7messageS2S_tYaKF",
-            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC11signMessage7messageS2S_tYaKF",
+            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC11signMessage7message14approvalQuorumS2S_SDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC11signMessage7message14approvalQuorumS2S_SDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -1450,7 +1562,7 @@
           {
             "kind": "Function",
             "name": "signEncodedTransaction",
-            "printedName": "signEncodedTransaction(base64Transaction:transactionType:)",
+            "printedName": "signEncodedTransaction(base64Transaction:transactionType:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1470,11 +1582,39 @@
                 "printedName": "DynamicSDKSwift.SolanaTransactionType",
                 "hasDefaultArg": true,
                 "usr": "s:15DynamicSDKSwift21SolanaTransactionTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC22signEncodedTransaction06base64G015transactionTypeS2S_AA0cgJ0OtYaKF",
-            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC22signEncodedTransaction06base64G015transactionTypeS2S_AA0cgJ0OtYaKF",
+            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC22signEncodedTransaction06base64G015transactionType14approvalQuorumS2S_AA0cgJ0OSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC22signEncodedTransaction06base64G015transactionType14approvalQuorumS2S_AA0cgJ0OSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -1487,7 +1627,7 @@
           {
             "kind": "Function",
             "name": "signTransaction",
-            "printedName": "signTransaction(serializedTransaction:transactionType:)",
+            "printedName": "signTransaction(serializedTransaction:transactionType:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1507,11 +1647,39 @@
                 "printedName": "DynamicSDKSwift.SolanaTransactionType",
                 "hasDefaultArg": true,
                 "usr": "s:15DynamicSDKSwift21SolanaTransactionTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC15signTransaction010serializedF015transactionTypeSS0C4Web30F0V_AA0cfI0OtYaKF",
-            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC15signTransaction010serializedF015transactionTypeSS0C4Web30F0V_AA0cfI0OtYaKF",
+            "usr": "s:15DynamicSDKSwift0A12SolanaSignerC15signTransaction010serializedF015transactionType14approvalQuorumSS0C4Web30F0V_AA0cfI0OSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift0A12SolanaSignerC15signTransaction010serializedF015transactionType14approvalQuorumSS0C4Web30F0V_AA0cfI0OSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -1958,7 +2126,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(walletId:message:)",
+            "printedName": "signMessage(walletId:message:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1977,11 +2145,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13StellarModuleC11signMessage8walletId7messageS2S_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift13StellarModuleC11signMessage8walletId7messageS2S_SStYaKF",
+            "usr": "s:15DynamicSDKSwift13StellarModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13StellarModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -1994,7 +2190,7 @@
           {
             "kind": "Function",
             "name": "signTransaction",
-            "printedName": "signTransaction(walletId:transactionXdr:)",
+            "printedName": "signTransaction(walletId:transactionXdr:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2013,11 +2209,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13StellarModuleC15signTransaction8walletId14transactionXdrS2S_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift13StellarModuleC15signTransaction8walletId14transactionXdrS2S_SStYaKF",
+            "usr": "s:15DynamicSDKSwift13StellarModuleC15signTransaction8walletId14transactionXdr14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13StellarModuleC15signTransaction8walletId14transactionXdr14approvalQuorumS2S_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -2322,7 +2546,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(walletId:message:)",
+            "printedName": "signMessage(walletId:message:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2341,11 +2565,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift9SuiModuleC11signMessage8walletId7messageS2S_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift9SuiModuleC11signMessage8walletId7messageS2S_SStYaKF",
+            "usr": "s:15DynamicSDKSwift9SuiModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift9SuiModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -2358,7 +2610,7 @@
           {
             "kind": "Function",
             "name": "signTransaction",
-            "printedName": "signTransaction(walletId:transaction:)",
+            "printedName": "signTransaction(walletId:transaction:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2377,11 +2629,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift9SuiModuleC15signTransaction8walletId11transactionS2S_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift9SuiModuleC15signTransaction8walletId11transactionS2S_SStYaKF",
+            "usr": "s:15DynamicSDKSwift9SuiModuleC15signTransaction8walletId11transaction14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift9SuiModuleC15signTransaction8walletId11transaction14approvalQuorumS2S_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -2394,7 +2674,7 @@
           {
             "kind": "Function",
             "name": "signTransferTransaction",
-            "printedName": "signTransferTransaction(walletId:to:value:gasPrice:gasBudget:)",
+            "printedName": "signTransferTransaction(walletId:to:value:gasPrice:gasBudget:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2449,11 +2729,39 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift9SuiModuleC23signTransferTransaction8walletId2to5value8gasPrice0L6BudgetS2S_S2SSiSgAJtYaKF",
-            "mangledName": "$s15DynamicSDKSwift9SuiModuleC23signTransferTransaction8walletId2to5value8gasPrice0L6BudgetS2S_S2SSiSgAJtYaKF",
+            "usr": "s:15DynamicSDKSwift9SuiModuleC23signTransferTransaction8walletId2to5value8gasPrice0L6Budget14approvalQuorumS2S_S2SSiSgAKSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift9SuiModuleC23signTransferTransaction8walletId2to5value8gasPrice0L6Budget14approvalQuorumS2S_S2SSiSgAKSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -2713,7 +3021,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(walletId:message:)",
+            "printedName": "signMessage(walletId:message:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2732,11 +3040,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift9TonModuleC11signMessage8walletId7messageS2S_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift9TonModuleC11signMessage8walletId7messageS2S_SStYaKF",
+            "usr": "s:15DynamicSDKSwift9TonModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift9TonModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -105421,7 +105757,7 @@
           {
             "kind": "Function",
             "name": "signMessage",
-            "printedName": "signMessage(wallet:message:)",
+            "printedName": "signMessage(wallet:message:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -105440,11 +105776,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC11signMessage6wallet7messageSSAA10BaseWalletV_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC11signMessage6wallet7messageSSAA10BaseWalletV_SStYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC11signMessage6wallet7message14approvalQuorumSSAA10BaseWalletV_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC11signMessage6wallet7message14approvalQuorumSSAA10BaseWalletV_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -105457,7 +105821,7 @@
           {
             "kind": "Function",
             "name": "signRawMessage",
-            "printedName": "signRawMessage(walletId:accountAddress:message:password:)",
+            "printedName": "signRawMessage(walletId:accountAddress:message:password:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -105497,11 +105861,39 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC14signRawMessage8walletId14accountAddress7message8passwordS2S_S3SSgtYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC14signRawMessage8walletId14accountAddress7message8passwordS2S_S3SSgtYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC14signRawMessage8walletId14accountAddress7message8password14approvalQuorumS2S_S3SSgSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC14signRawMessage8walletId14accountAddress7message8password14approvalQuorumS2S_S3SSgSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -105959,7 +106351,7 @@
           {
             "kind": "Function",
             "name": "signEthereumTransaction",
-            "printedName": "signEthereumTransaction(walletId:transaction:)",
+            "printedName": "signEthereumTransaction(walletId:transaction:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -105978,11 +106370,39 @@
                 "name": "EthereumTransaction",
                 "printedName": "DynamicSDKSwift.EthereumTransaction",
                 "usr": "s:15DynamicSDKSwift19EthereumTransactionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction8walletId11transactionS2S_AA0fG0VtYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction8walletId11transactionS2S_AA0fG0VtYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction8walletId11transaction14approvalQuorumS2S_AA0fG0VSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction8walletId11transaction14approvalQuorumS2S_AA0fG0VSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -105995,7 +106415,7 @@
           {
             "kind": "Function",
             "name": "signEthereumTransaction",
-            "printedName": "signEthereumTransaction(wallet:to:value:gasLimit:maxPriorityFeePerGas:maxFeePerGas:)",
+            "printedName": "signEthereumTransaction(wallet:to:value:gasLimit:maxPriorityFeePerGas:maxFeePerGas:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -106038,11 +106458,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction6wallet2to5value8gasLimit20maxPriorityFeePerGas0mopQ0SSAA10BaseWalletV_S5StYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction6wallet2to5value8gasLimit20maxPriorityFeePerGas0mopQ0SSAA10BaseWalletV_S5StYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction6wallet2to5value8gasLimit20maxPriorityFeePerGas0mopQ014approvalQuorumSSAA10BaseWalletV_S5SSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC23signEthereumTransaction6wallet2to5value8gasLimit20maxPriorityFeePerGas0mopQ014approvalQuorumSSAA10BaseWalletV_S5SSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -106055,7 +106503,7 @@
           {
             "kind": "Function",
             "name": "signTypedData",
-            "printedName": "signTypedData(walletId:typedData:)",
+            "printedName": "signTypedData(walletId:typedData:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -106074,11 +106522,39 @@
                 "name": "TypedData",
                 "printedName": "DynamicSDKSwift.TypedData",
                 "usr": "s:15DynamicSDKSwift9TypedDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC13signTypedData8walletId05typedG0S2S_AA0fG0VtYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC13signTypedData8walletId05typedG0S2S_AA0fG0VtYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC13signTypedData8walletId05typedG014approvalQuorumS2S_AA0fG0VSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC13signTypedData8walletId05typedG014approvalQuorumS2S_AA0fG0VSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -106091,7 +106567,7 @@
           {
             "kind": "Function",
             "name": "signTypedData",
-            "printedName": "signTypedData(wallet:typedDataJson:)",
+            "printedName": "signTypedData(wallet:typedDataJson:approvalQuorum:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -106110,11 +106586,39 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift13WalletsModuleC13signTypedData6wallet05typedG4JsonSSAA10BaseWalletV_SStYaKF",
-            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC13signTypedData6wallet05typedG4JsonSSAA10BaseWalletV_SStYaKF",
+            "usr": "s:15DynamicSDKSwift13WalletsModuleC13signTypedData6wallet05typedG4Json14approvalQuorumSSAA10BaseWalletV_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift13WalletsModuleC13signTypedData6wallet05typedG4Json14approvalQuorumSSAA10BaseWalletV_SSSDySSypGSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -111590,7 +112094,7 @@
       "kind": "StringLiteral",
       "offset": 90,
       "length": 8,
-      "value": "\"5.10.0\""
+      "value": "\"5.12.0\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
