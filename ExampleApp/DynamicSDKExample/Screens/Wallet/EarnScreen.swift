@@ -16,7 +16,20 @@ struct EarnScreen: View {
         if let vault = vm.selectedVault {
           vaultDetail(vault)
         } else {
-          vaultList
+          Picker("View", selection: $vm.tab) {
+            ForEach(EarnTab.allCases, id: \.self) { tab in
+              Text(tab.rawValue).tag(tab)
+            }
+          }
+          .pickerStyle(.segmented)
+          .padding(.horizontal)
+
+          switch vm.tab {
+          case .vaults:
+            vaultList
+          case .positions:
+            positionsList
+          }
         }
 
         if let step = vm.stepMessage {
@@ -53,11 +66,50 @@ struct EarnScreen: View {
         vm.loadVaults()
       }
     }
+    .onChange(of: vm.tab) { tab in
+      if tab == .positions {
+        vm.loadPositions()
+      }
+    }
+  }
+
+  private var positionsList: some View {
+    VStack(alignment: .leading, spacing: 12) {
+      Text("Your positions")
+        .font(.headline)
+        .padding(.horizontal)
+
+      if vm.isLoadingPositions {
+        ProgressView()
+          .frame(maxWidth: .infinity)
+      }
+
+      if vm.positions.isEmpty && !vm.isLoadingPositions {
+        Text("You have no positions in any vault.")
+          .foregroundColor(.secondary)
+          .padding(.horizontal)
+      }
+
+      ForEach(vm.positions) { row in
+        Button(action: { vm.openVault(id: row.vault.vaultId) }) {
+          PositionRow(row: row)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal)
+      }
+
+      if vm.positionsSkipped > 0 {
+        Text("\(vm.positionsSkipped) vault(s) could not be checked for this wallet.")
+          .font(.caption)
+          .foregroundColor(.secondary)
+          .padding(.horizontal)
+      }
+    }
   }
 
   private var vaultList: some View {
     VStack(alignment: .leading, spacing: 12) {
-      Text("Vaults")
+      Text("\(vm.walletChainName) vaults")
         .font(.headline)
         .padding(.horizontal)
 
@@ -67,7 +119,7 @@ struct EarnScreen: View {
       }
 
       if vm.vaults.isEmpty && !vm.isLoadingVaults {
-        Text("No vaults are available for this environment.")
+        Text("No \(vm.walletChainName) vaults are available for this environment.")
           .foregroundColor(.secondary)
           .padding(.horizontal)
       }
@@ -107,7 +159,7 @@ struct EarnScreen: View {
           .foregroundColor(.secondary)
 
         if let netApy = vault.netApy {
-          Text("Net APY: \(netApy, specifier: "%.2f")%")
+          Text("Net APY: \(netApy * 100, specifier: "%.2f")%")
             .font(.subheadline)
         }
       }
@@ -122,10 +174,10 @@ struct EarnScreen: View {
         VStack(alignment: .leading, spacing: 4) {
           Text("Your position")
             .font(.headline)
-          Text("Shares: \(position.shares)")
+          Text("Shares: \(position.shares) (raw)")
             .font(.caption)
             .monospaced()
-          Text("Assets: \(position.assets)")
+          Text("Assets: \(EarnUnits.format(position.assets, decimals: vault.assetDecimals)) \(vault.assetSymbol)")
             .font(.caption)
             .monospaced()
         }
@@ -138,13 +190,46 @@ struct EarnScreen: View {
             .font(.headline)
 
           ForEach(vm.rewards, id: \.tokenAddress) { reward in
-            Text("\(reward.accrued) \(reward.tokenSymbol) (raw units)")
+            Text("\(EarnUnits.format(reward.accrued, decimals: reward.tokenDecimals)) \(reward.tokenSymbol)")
               .font(.caption)
               .monospaced()
           }
         }
         .padding(.horizontal)
       }
+
+      if let performance = vm.performance {
+        VStack(alignment: .leading, spacing: 4) {
+          Text("Performance")
+            .font(.headline)
+          Text("Net earnings: \(EarnUnits.format(performance.netEarningsAssets, decimals: vault.assetDecimals)) \(vault.assetSymbol)")
+            .font(.caption)
+            .monospaced()
+          if let returnOnCapital = performance.returnOnCapital {
+            Text("Return on capital: \(returnOnCapital * 100, specifier: "%.2f")%")
+              .font(.caption)
+              .monospaced()
+          }
+        }
+        .padding(.horizontal)
+      }
+
+      if let earnings = vm.earnings {
+        VStack(alignment: .leading, spacing: 4) {
+          Text("Earnings across vaults")
+            .font(.headline)
+          Text("Assets: \(earnings.totalAssetsUsd, specifier: "%.2f") USD")
+            .font(.caption)
+            .monospaced()
+          Text("P&L: \(earnings.totalPnlUsd, specifier: "%.2f") USD")
+            .font(.caption)
+            .monospaced()
+        }
+        .padding(.horizontal)
+      }
+
+      Toggle("Gas sponsored", isOn: $vm.sponsored)
+        .padding(.horizontal)
 
       VStack(alignment: .leading, spacing: 8) {
         Text("Amount in \(vault.assetSymbol)")
@@ -154,6 +239,12 @@ struct EarnScreen: View {
         TextField("e.g. 0.01", text: $vm.amount)
           .textFieldStyle(RoundedBorderTextFieldStyle())
           .keyboardType(.decimalPad)
+
+        if let hint = vm.amountHint {
+          Text(hint)
+            .font(.caption)
+            .foregroundColor(.red)
+        }
       }
       .padding(.horizontal)
 
@@ -200,9 +291,67 @@ struct VaultRow: View {
       Spacer()
 
       if let netApy = vault.netApy {
-        Text("\(netApy, specifier: "%.2f")%")
+        Text("\(netApy * 100, specifier: "%.2f")%")
           .font(.subheadline)
           .foregroundColor(.blue)
+      }
+
+      Image(systemName: "chevron.right")
+        .foregroundColor(.secondary)
+    }
+    .padding()
+    .background(Color(.systemGray6))
+    .cornerRadius(12)
+  }
+}
+
+struct PositionRow: View {
+  let row: EarnPositionRow
+
+  var body: some View {
+    HStack {
+      VStack(alignment: .leading, spacing: 4) {
+        Text("\(row.vault.assetSymbol) · \(row.vault.curator)")
+          .font(.subheadline)
+          .fontWeight(.medium)
+          .foregroundColor(.primary)
+
+        Text("Chain ID: \(row.vault.chainId)")
+          .font(.caption)
+          .foregroundColor(.secondary)
+
+        Text("\(EarnUnits.format(row.position.assets, decimals: row.vault.assetDecimals)) \(row.vault.assetSymbol)")
+          .font(.caption)
+          .monospaced()
+          .foregroundColor(.primary)
+
+        if let earnings = row.earnings {
+          if let pnlUsd = earnings.pnlUsd {
+            Text("P&L: \(pnlUsd, specifier: "%.2f") USD")
+              .font(.caption)
+              .foregroundColor(.secondary)
+          }
+          if let roe = earnings.roe {
+            Text("Return: \(roe * 100, specifier: "%.2f")%")
+              .font(.caption)
+              .foregroundColor(.secondary)
+          }
+        }
+      }
+
+      Spacer()
+
+      VStack(alignment: .trailing, spacing: 4) {
+        if let assetsUsd = row.earnings?.assetsUsd {
+          Text("$\(assetsUsd, specifier: "%.2f")")
+            .font(.subheadline)
+            .foregroundColor(.blue)
+        }
+        if let netApy = row.vault.netApy {
+          Text("\(netApy * 100, specifier: "%.2f")% APY")
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
       }
 
       Image(systemName: "chevron.right")
