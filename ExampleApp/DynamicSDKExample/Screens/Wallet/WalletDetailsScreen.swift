@@ -426,6 +426,15 @@ struct SolanaActionsView: View {
         )
       }
       .padding(.horizontal)
+
+      // Earn
+      NavigationLink(destination: EarnScreen(wallet: wallet)) {
+        WalletActionButton(
+          icon: "chart.line.uptrend.xyaxis",
+          title: "Earn (Yield Vaults)"
+        )
+      }
+      .padding(.horizontal)
     }
     .padding(.vertical)
   }
