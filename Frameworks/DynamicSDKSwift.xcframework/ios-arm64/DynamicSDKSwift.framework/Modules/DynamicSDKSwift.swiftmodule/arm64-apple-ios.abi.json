@@ -3598,6 +3598,429 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DynamicSDKSwift"
+      },
+      {
+        "kind": "Import",
+        "name": "AnyCodableSwift",
+        "printedName": "AnyCodableSwift",
+        "declKind": "Import",
+        "moduleName": "DynamicSDKSwift"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TronModule",
+        "printedName": "TronModule",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TronModule",
+                "printedName": "DynamicSDKSwift.TronModule",
+                "usr": "s:15DynamicSDKSwift10TronModuleC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BroadcastMessageTransport",
+                "printedName": "DynamicSDKSwift.BroadcastMessageTransport",
+                "usr": "s:15DynamicSDKSwift25BroadcastMessageTransportC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15DynamicSDKSwift10TronModuleCyAcA25BroadcastMessageTransportCcfc",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleCyAcA25BroadcastMessageTransportCcfc",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "signMessage",
+            "printedName": "signMessage(walletId:message:approvalQuorum:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15DynamicSDKSwift10TronModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleC11signMessage8walletId7message14approvalQuorumS2S_SSSDySSypGSgtYaKF",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendBalance",
+            "printedName": "sendBalance(walletId:toAddress:amount:tokenAddress:tokenDecimals:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8DecimalsS2S_S3SSgSiSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8DecimalsS2S_S3SSgSiSgtYaKF",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBalance",
+            "printedName": "getBalance(walletId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15DynamicSDKSwift10TronModuleC10getBalance8walletIdS2S_tYaKF",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleC10getBalance8walletIdS2S_tYaKF",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNetworkDetails",
+            "printedName": "getNetworkDetails(walletId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TronNetworkDetails",
+                "printedName": "DynamicSDKSwift.TronNetworkDetails",
+                "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15DynamicSDKSwift10TronModuleC17getNetworkDetails8walletIdAA0cfG0VSS_tYaKF",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleC17getNetworkDetails8walletIdAA0cfG0VSS_tYaKF",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15DynamicSDKSwift10TronModuleC",
+        "mangledName": "$s15DynamicSDKSwift10TronModuleC",
+        "moduleName": "DynamicSDKSwift",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TronNetworkDetails",
+        "printedName": "TronNetworkDetails",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "chainId",
+            "printedName": "chainId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV7chainIdSSvp",
+            "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV7chainIdSSvp",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV7chainIdSSvg",
+                "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV7chainIdSSvg",
+                "moduleName": "DynamicSDKSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV4nameSSvp",
+            "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV4nameSSvp",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV4nameSSvg",
+                "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV4nameSSvg",
+                "moduleName": "DynamicSDKSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(chainId:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TronNetworkDetails",
+                "printedName": "DynamicSDKSwift.TronNetworkDetails",
+                "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV7chainId4nameACSS_SStcfc",
+            "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV7chainId4nameACSS_SStcfc",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15DynamicSDKSwift18TronNetworkDetailsV",
+        "mangledName": "$s15DynamicSDKSwift18TronNetworkDetailsV",
+        "moduleName": "DynamicSDKSwift",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "WebViewVersion",
         "printedName": "WebViewVersion",
@@ -12508,6 +12931,54 @@
                 "declKind": "Accessor",
                 "usr": "s:15DynamicSDKSwift0A3SDKC7stellarAA13StellarModuleCvg",
                 "mangledName": "$s15DynamicSDKSwift0A3SDKC7stellarAA13StellarModuleCvg",
+                "moduleName": "DynamicSDKSwift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tron",
+            "printedName": "tron",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TronModule",
+                "printedName": "DynamicSDKSwift.TronModule",
+                "usr": "s:15DynamicSDKSwift10TronModuleC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift0A3SDKC4tronAA10TronModuleCvp",
+            "mangledName": "$s15DynamicSDKSwift0A3SDKC4tronAA10TronModuleCvp",
+            "moduleName": "DynamicSDKSwift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TronModule",
+                    "printedName": "DynamicSDKSwift.TronModule",
+                    "usr": "s:15DynamicSDKSwift10TronModuleC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift0A3SDKC4tronAA10TronModuleCvg",
+                "mangledName": "$s15DynamicSDKSwift0A3SDKC4tronAA10TronModuleCvg",
                 "moduleName": "DynamicSDKSwift",
                 "implicit": true,
                 "declAttributes": [
@@ -29403,6 +29874,43 @@
             "declKind": "EnumElement",
             "usr": "s:15DynamicSDKSwift19EmbeddedWalletChainO3btcyA2CmF",
             "mangledName": "$s15DynamicSDKSwift19EmbeddedWalletChainO3btcyA2CmF",
+            "moduleName": "DynamicSDKSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "tron",
+            "printedName": "tron",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DynamicSDKSwift.EmbeddedWalletChain.Type) -> DynamicSDKSwift.EmbeddedWalletChain",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EmbeddedWalletChain",
+                    "printedName": "DynamicSDKSwift.EmbeddedWalletChain",
+                    "usr": "s:15DynamicSDKSwift19EmbeddedWalletChainO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DynamicSDKSwift.EmbeddedWalletChain.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EmbeddedWalletChain",
+                        "printedName": "DynamicSDKSwift.EmbeddedWalletChain",
+                        "usr": "s:15DynamicSDKSwift19EmbeddedWalletChainO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15DynamicSDKSwift19EmbeddedWalletChainO4tronyA2CmF",
+            "mangledName": "$s15DynamicSDKSwift19EmbeddedWalletChainO4tronyA2CmF",
             "moduleName": "DynamicSDKSwift"
           },
           {
@@ -112582,37 +113090,44 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
-      "offset": 308,
+      "offset": 226,
       "length": 5,
       "value": "\"Evm\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
-      "offset": 327,
+      "offset": 245,
       "length": 5,
       "value": "\"Sol\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
-      "offset": 346,
+      "offset": 264,
       "length": 5,
       "value": "\"Sui\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
-      "offset": 365,
+      "offset": 283,
       "length": 5,
       "value": "\"Ton\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
-      "offset": 384,
+      "offset": 302,
       "length": 5,
       "value": "\"Btc\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "kind": "StringLiteral",
+      "offset": 322,
+      "length": 6,
+      "value": "\"Tron\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
