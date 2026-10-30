@@ -4986,6 +4986,84 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "SDKVersion",
+        "printedName": "SDKVersion",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "current",
+            "printedName": "current",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15DynamicSDKSwift10SDKVersionO7currentSSvpZ",
+            "mangledName": "$s15DynamicSDKSwift10SDKVersionO7currentSSvpZ",
+            "moduleName": "DynamicSDKSwift",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15DynamicSDKSwift10SDKVersionO7currentSSvgZ",
+                "mangledName": "$s15DynamicSDKSwift10SDKVersionO7currentSSvgZ",
+                "moduleName": "DynamicSDKSwift",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15DynamicSDKSwift10SDKVersionO",
+        "mangledName": "$s15DynamicSDKSwift10SDKVersionO",
+        "moduleName": "DynamicSDKSwift",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "WebViewVersion",
         "printedName": "WebViewVersion",
         "children": [
@@ -12437,6 +12515,20 @@
         ],
         "throwing": true,
         "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DynamicSDKSwift"
+      },
+      {
+        "kind": "Import",
+        "name": "AnyCodableSwift",
+        "printedName": "AnyCodableSwift",
+        "declKind": "Import",
+        "moduleName": "DynamicSDKSwift"
       },
       {
         "kind": "Import",
@@ -99540,7 +99632,7 @@
           {
             "kind": "Function",
             "name": "delegateKeyShares",
-            "printedName": "delegateKeyShares(wallets:)",
+            "printedName": "delegateKeyShares(wallets:password:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -99569,11 +99661,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift16DelegationModuleC17delegateKeyShares7walletsySayAA0C16WalletIdentifierVGSg_tYaKF",
-            "mangledName": "$s15DynamicSDKSwift16DelegationModuleC17delegateKeyShares7walletsySayAA0C16WalletIdentifierVGSg_tYaKF",
+            "usr": "s:15DynamicSDKSwift16DelegationModuleC17delegateKeyShares7wallets8passwordySayAA0C16WalletIdentifierVGSg_SSSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift16DelegationModuleC17delegateKeyShares7wallets8passwordySayAA0C16WalletIdentifierVGSg_SSSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -118051,6 +118158,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 272,
+      "length": 7,
+      "value": "\"1.9.0\""
+    },
+    {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/WebViewVersion.swift",
       "kind": "StringLiteral",
       "offset": 90,
@@ -118207,35 +118321,35 @@
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
-      "offset": 971,
+      "offset": 1134,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
-      "offset": 1778,
+      "offset": 1941,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
-      "offset": 5951,
+      "offset": 6237,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "StringLiteral",
-      "offset": 6578,
+      "offset": 6864,
       "length": 37,
       "value": "\"Invalid response for \""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "StringLiteral",
-      "offset": 6614,
+      "offset": 6900,
       "length": 2,
       "value": "\"\""
     },
@@ -118259,6 +118373,20 @@
       "offset": 259,
       "length": 20,
       "value": "\"sdk__loadedChanged\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
+      "kind": "StringLiteral",
+      "offset": 314,
+      "length": 19,
+      "value": "\"delegateKeyShares\""
+    },
+    {
+      "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
+      "kind": "StringLiteral",
+      "offset": 356,
+      "length": 18,
+      "value": "\"revokeDelegation\""
     },
     {
       "filePath": "\/Users\/runner\/actions-runner\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/VisibilityModule.swift",
