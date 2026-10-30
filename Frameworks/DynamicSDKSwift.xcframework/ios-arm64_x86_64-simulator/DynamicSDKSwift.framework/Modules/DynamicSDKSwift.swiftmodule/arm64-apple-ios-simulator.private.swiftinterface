@@ -174,6 +174,9 @@ public struct TronNetworkDetails {
   public let name: Swift.String
   public init(chainId: Swift.String, name: Swift.String)
 }
+public enum SDKVersion {
+  public static let current: Swift.String
+}
 public enum WebViewVersion {
   public static let current: Swift.String
 }
@@ -2577,7 +2580,7 @@ final public class DelegationModule {
   final public func initDelegationProcess(walletIds: [Swift.String]? = nil) async throws
   final public func shouldPromptWalletDelegation() async throws -> Swift.Bool
   final public func getWalletsDelegatedStatus() async throws -> [DynamicSDKSwift.WalletDelegatedStatus]
-  final public func delegateKeyShares(wallets: [DynamicSDKSwift.DelegationWalletIdentifier]? = nil) async throws
+  final public func delegateKeyShares(wallets: [DynamicSDKSwift.DelegationWalletIdentifier]? = nil, password: Swift.String? = nil) async throws
   final public func revokeDelegation(wallets: [DynamicSDKSwift.DelegationWalletIdentifier]) async throws
   final public func denyWalletDelegation(walletId: Swift.String) async throws
   final public func dismissDelegationPrompt(walletId: Swift.String? = nil) async throws
