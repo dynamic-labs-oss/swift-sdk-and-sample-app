@@ -7,6 +7,7 @@ import AuthenticationServices
 import Combine
 import CryptoKit
 import Foundation
+import Network
 import ObjectiveC
 import Security
 import SolanaWeb3
@@ -197,9 +198,10 @@ public struct ClientProps : Swift.Equatable {
   public var bitcoinNetworks: [DynamicSDKSwift.GenericNetwork]?
   public var tonNetworks: [DynamicSDKSwift.GenericNetwork]?
   public var reownProjectId: Swift.String?
+  public var allowedDeeplinkSchemes: [Swift.String]
   public var webviewLoad: DynamicSDKSwift.WebviewLoadOptions?
   public var locale: AnyCodableSwift.AnyCodable?
-  public init(environmentId: Swift.String, apiBaseUrl: Swift.String? = "https://app.dynamicauth.com/api/v0", webViewUrl: Swift.String? = nil, appLogoUrl: Swift.String? = nil, appName: Swift.String = "Dynamic", redirectUrl: Swift.String? = nil, appOrigin: Swift.String? = nil, cssOverrides: Swift.String? = nil, debugWebview: Swift.Bool = false, logLevel: DynamicSDKSwift.LoggerLevel = .info, debug: DynamicSDKSwift.ClientDebugProps? = nil, evmNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, solNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, bitcoinNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, tonNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, reownProjectId: Swift.String? = nil, locale: AnyCodableSwift.AnyCodable? = nil, webviewLoad: DynamicSDKSwift.WebviewLoadOptions? = nil)
+  public init(environmentId: Swift.String, apiBaseUrl: Swift.String? = "https://app.dynamicauth.com/api/v0", webViewUrl: Swift.String? = nil, appLogoUrl: Swift.String? = nil, appName: Swift.String = "Dynamic", redirectUrl: Swift.String? = nil, appOrigin: Swift.String? = nil, cssOverrides: Swift.String? = nil, debugWebview: Swift.Bool = false, logLevel: DynamicSDKSwift.LoggerLevel = .info, debug: DynamicSDKSwift.ClientDebugProps? = nil, evmNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, solNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, bitcoinNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, tonNetworks: [DynamicSDKSwift.GenericNetwork]? = nil, reownProjectId: Swift.String? = nil, locale: AnyCodableSwift.AnyCodable? = nil, webviewLoad: DynamicSDKSwift.WebviewLoadOptions? = nil, allowedDeeplinkSchemes: [Swift.String] = [])
   public static func == (a: DynamicSDKSwift.ClientProps, b: DynamicSDKSwift.ClientProps) -> Swift.Bool
 }
 public struct ClientDebugProps : Swift.Equatable, Swift.Codable {
@@ -419,6 +421,9 @@ final public class VisibilityModule {
   final public let webViewController: DynamicSDKSwift.DynamicWebViewController
   final public let overlayWindow: DynamicSDKSwift.DynamicOverlayWindowManager
   final public let props: DynamicSDKSwift.ClientProps
+  final public var urlOpenErrors: Combine.AnyPublisher<DynamicSDKSwift.DynamicSDKError, Swift.Never> {
+    get
+  }
   @_Concurrency.MainActor public static func initialize(props: DynamicSDKSwift.ClientProps) -> DynamicSDKSwift.DynamicSDK
   public static func getInstance() throws -> DynamicSDKSwift.DynamicSDK
   @available(*, deprecated, message: "Use getInstance() which throws instead of crashing")
@@ -428,13 +433,20 @@ final public class VisibilityModule {
 public enum Handlers {
   public static func setupManifestHandler(transport: DynamicSDKSwift.MessageTransport, props: DynamicSDKSwift.ClientProps)
   public static func setupFetcherHandler(transport: DynamicSDKSwift.MessageTransport)
-  public static func setupUrlHandler(transport: DynamicSDKSwift.MessageTransport)
+  public static func setupUrlHandler(transport: DynamicSDKSwift.MessageTransport, allowedDeeplinkSchemes: [Swift.String] = [], onError: @escaping (DynamicSDKSwift.DynamicSDKError) -> Swift.Void = { _ in })
   public static func setupLogHandler(transport: DynamicSDKSwift.MessageTransport, logLevel: DynamicSDKSwift.LoggerLevel)
   public static func setupStorageHandler(transport: DynamicSDKSwift.MessageTransport)
   public static func setupDownloadFileHandler(transport: DynamicSDKSwift.MessageTransport)
   public static func setupWalletConnectedHandler(transport: DynamicSDKSwift.MessageTransport)
   public static func setupPlatformHandler(transport: DynamicSDKSwift.MessageTransport)
   public static func setupKeychainHandler(transport: DynamicSDKSwift.MessageTransport)
+}
+public struct AcceptBusinessAccountInviteResult : Swift.Equatable {
+  public let invite: DynamicSDKSwift.BusinessAccountInvite
+  public let member: DynamicSDKSwift.BusinessAccountMember
+  public init(invite: DynamicSDKSwift.BusinessAccountInvite, member: DynamicSDKSwift.BusinessAccountMember)
+  public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.AcceptBusinessAccountInviteResult?
+  public static func == (a: DynamicSDKSwift.AcceptBusinessAccountInviteResult, b: DynamicSDKSwift.AcceptBusinessAccountInviteResult) -> Swift.Bool
 }
 public struct AddBusinessAccountSignerResponse : Swift.Equatable {
   public let shareSetId: Swift.String
@@ -491,6 +503,23 @@ public struct BusinessAccountDetail {
   public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.BusinessAccountDetail?
   public func toDict() -> [Swift.String : Any]
 }
+public struct BusinessAccountInvite : Swift.Equatable {
+  public let id: Swift.String
+  public let businessAccountId: Swift.String
+  public let businessAccountName: Swift.String?
+  public let kind: Swift.String
+  public let memberRole: Swift.String
+  public let memberRoleName: Swift.String
+  public let status: Swift.String
+  public let invitedAt: Foundation.Date?
+  public let expiresAt: Foundation.Date?
+  public let acceptedAt: Foundation.Date?
+  public let walletId: Swift.String?
+  public init(id: Swift.String, businessAccountId: Swift.String, businessAccountName: Swift.String? = nil, kind: Swift.String, memberRole: Swift.String, memberRoleName: Swift.String, status: Swift.String, invitedAt: Foundation.Date? = nil, expiresAt: Foundation.Date? = nil, acceptedAt: Foundation.Date? = nil, walletId: Swift.String? = nil)
+  public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.BusinessAccountInvite?
+  public func toDict() -> [Swift.String : Any]
+  public static func == (a: DynamicSDKSwift.BusinessAccountInvite, b: DynamicSDKSwift.BusinessAccountInvite) -> Swift.Bool
+}
 public struct BusinessAccountList {
   public let items: [DynamicSDKSwift.BusinessAccount]?
   public let nextCursor: Swift.String?
@@ -509,6 +538,29 @@ public struct BusinessAccountMember : Swift.Equatable {
   public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.BusinessAccountMember?
   public func toDict() -> [Swift.String : Any]
   public static func == (a: DynamicSDKSwift.BusinessAccountMember, b: DynamicSDKSwift.BusinessAccountMember) -> Swift.Bool
+}
+public enum BusinessAccountMemberCreationResult : Swift.Equatable {
+  case member(DynamicSDKSwift.BusinessAccountMember)
+  case invite(DynamicSDKSwift.BusinessAccountMemberInvite)
+  public static func == (a: DynamicSDKSwift.BusinessAccountMemberCreationResult, b: DynamicSDKSwift.BusinessAccountMemberCreationResult) -> Swift.Bool
+}
+public struct BusinessAccountMemberInvite : Swift.Equatable {
+  public let id: Swift.String
+  public let businessAccountId: Swift.String
+  public let identifierType: Swift.String
+  public let identifierValue: Swift.String
+  public let kind: Swift.String
+  public let memberRole: Swift.String
+  public let memberRoleName: Swift.String
+  public let status: Swift.String
+  public let invitedAt: Foundation.Date?
+  public let expiresAt: Foundation.Date?
+  public let proposalId: Swift.String?
+  public let walletId: Swift.String?
+  public init(id: Swift.String, businessAccountId: Swift.String, identifierType: Swift.String, identifierValue: Swift.String, kind: Swift.String, memberRole: Swift.String, memberRoleName: Swift.String, status: Swift.String, invitedAt: Foundation.Date? = nil, expiresAt: Foundation.Date? = nil, proposalId: Swift.String? = nil, walletId: Swift.String? = nil)
+  public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.BusinessAccountMemberInvite?
+  public func toDict() -> [Swift.String : Any]
+  public static func == (a: DynamicSDKSwift.BusinessAccountMemberInvite, b: DynamicSDKSwift.BusinessAccountMemberInvite) -> Swift.Bool
 }
 public enum BusinessAccountMemberRole : Swift.String, Swift.Equatable, Swift.CaseIterable {
   case owner
@@ -1237,9 +1289,24 @@ public struct PolicyLayerResponse {
   public let layerId: Swift.String
   public let layerContent: DynamicSDKSwift.PolicyLayerContent
   public let updatedAt: Foundation.Date?
-  public init(message: Swift.String? = nil, layerId: Swift.String, layerContent: DynamicSDKSwift.PolicyLayerContent, updatedAt: Foundation.Date? = nil)
+  public let layerDigest: Swift.String?
+  public let rbacVersion: Swift.Int?
+  public init(message: Swift.String? = nil, layerId: Swift.String, layerContent: DynamicSDKSwift.PolicyLayerContent, updatedAt: Foundation.Date? = nil, layerDigest: Swift.String? = nil, rbacVersion: Swift.Int? = nil)
   public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.PolicyLayerResponse?
   public func toDict() -> [Swift.String : Any]
+}
+public struct PolicyLayerUpdateActionRequired {
+  public let approvalRequirements: [DynamicSDKSwift.BusinessAccountApprovalRequirement]
+  public let intent: [Swift.String : Any]
+  public let proposalId: Swift.String
+  public let reason: Swift.String
+  public init(approvalRequirements: [DynamicSDKSwift.BusinessAccountApprovalRequirement], intent: [Swift.String : Any], proposalId: Swift.String, reason: Swift.String)
+  public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.PolicyLayerUpdateActionRequired?
+}
+public enum PolicyLayerUpdateResult {
+  case layer(DynamicSDKSwift.PolicyLayerResponse)
+  case actionRequired(DynamicSDKSwift.PolicyLayerUpdateActionRequired)
+  public static func fromDict(_ dict: [Swift.String : Any]) -> DynamicSDKSwift.PolicyLayerUpdateResult?
 }
 public struct PolicyMaxAmountPerTransaction : Swift.Equatable {
   public let amount: Swift.String
@@ -2558,7 +2625,11 @@ final public class BusinessAccountsModule {
   final public func get(businessAccountId: Swift.String) async throws -> DynamicSDKSwift.BusinessAccountDetail
   final public func addWallet(businessAccountId: Swift.String? = nil, walletId: Swift.String) async throws -> DynamicSDKSwift.BusinessAccountDetail
   final public func addSigner(accountAddress: Swift.String, chainName: Swift.String, targetSignerIdentity: DynamicSDKSwift.TargetIdentity, businessAccountId: Swift.String? = nil, walletId: Swift.String? = nil, signerType: DynamicSDKSwift.BusinessAccountSignerType? = nil, password: Swift.String? = nil, targetSignerPassword: Swift.String? = nil) async throws -> DynamicSDKSwift.AddBusinessAccountSignerResponse
-  final public func addMember(businessAccountId: Swift.String, userId: Swift.String? = nil, identifier: Swift.String? = nil, identifierType: DynamicSDKSwift.BusinessAccountSignerIdentifierType? = nil, role: DynamicSDKSwift.BusinessAccountMemberRole? = nil) async throws -> DynamicSDKSwift.BusinessAccountMember
+  final public func addMember(businessAccountId: Swift.String, userId: Swift.String? = nil, identifier: Swift.String? = nil, identifierType: DynamicSDKSwift.BusinessAccountSignerIdentifierType? = nil, role: DynamicSDKSwift.BusinessAccountMemberRole? = nil) async throws -> DynamicSDKSwift.BusinessAccountMemberCreationResult
+  final public func getInvites() async throws -> [DynamicSDKSwift.BusinessAccountInvite]
+  final public func acceptInvite(inviteId: Swift.String) async throws -> DynamicSDKSwift.AcceptBusinessAccountInviteResult
+  final public func listMemberInvites(businessAccountId: Swift.String) async throws -> [DynamicSDKSwift.BusinessAccountMemberInvite]
+  final public func cancelMemberInvite(businessAccountId: Swift.String, inviteId: Swift.String) async throws -> DynamicSDKSwift.BusinessAccountMemberInvite
   final public func removeSigner(businessAccountId: Swift.String, walletId: Swift.String, signerId: Swift.String) async throws -> DynamicSDKSwift.BusinessAccountSigner
   final public func removeMember(businessAccountId: Swift.String, userId: Swift.String) async throws -> DynamicSDKSwift.BusinessAccountMember
   final public func updateMemberRole(businessAccountId: Swift.String, userId: Swift.String, role: DynamicSDKSwift.BusinessAccountMemberRole) async throws -> DynamicSDKSwift.BusinessAccountMember
@@ -2858,6 +2929,7 @@ final public class PoliciesModule {
   final public func removeWalletRule(walletId: Swift.String, ruleId: Swift.String) async throws -> DynamicSDKSwift.PolicyLayerResponse
   final public func removeSignerRule(walletId: Swift.String, shareSetId: Swift.String? = nil, ruleId: Swift.String) async throws -> DynamicSDKSwift.PolicyLayerResponse
   final public func removeAccountRule(businessAccountId: Swift.String, ruleId: Swift.String) async throws -> DynamicSDKSwift.PolicyLayerResponse
+  final public func updateAccountLayer(businessAccountId: Swift.String, request: [Swift.String : Any], layer: DynamicSDKSwift.PolicyLayerResponse? = nil, proposalId: Swift.String? = nil, autoExecute: Swift.Bool? = nil, signedIntent: DynamicSDKSwift.SignedSigningQuorumIntent? = nil) async throws -> DynamicSDKSwift.PolicyLayerUpdateResult
   final public func buildAllowRule(input: DynamicSDKSwift.PolicyRuleInput) async throws -> DynamicSDKSwift.PolicyRule
   final public func buildApprovalRequirementsRule(approvalRequirements: [DynamicSDKSwift.PolicyApprovalRequirement], chain: DynamicSDKSwift.WaasChain, chainIds: [Swift.Int]? = nil, name: Swift.String? = nil) async throws -> DynamicSDKSwift.PolicyRule?
   final public func buildDenyRule(input: DynamicSDKSwift.PolicyRuleInput) async throws -> DynamicSDKSwift.PolicyRule
