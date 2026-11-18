@@ -3,6 +3,20 @@
 All notable changes to the `DynamicSDKSwift` package are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.10.0]
+
+### Added
+- **Business account invitations.** `BusinessAccountsModule` gains `getInvites()`, `acceptInvite(token:)`, `listMemberInvites(businessAccountId:)` and `cancelMemberInvite(businessAccountId:inviteId:)`, with new models `BusinessAccountInvite`, `BusinessAccountMemberInvite`, `AcceptBusinessAccountInviteResult` and `BusinessAccountMemberCreationResult`. `addMember()` now returns a `BusinessAccountMemberCreationResult` (`.member` / `.invite`) so an unverified email produces a pending invite instead of failing.
+- **`PoliciesModule.updateAccountLayer()`.** Update an account's policy layer through the governed (multi-party approved) intent flow; returns `PolicyLayerUpdateResult`.
+
+### Changed
+- Bumped bundled WebView to `5.18.0`.
+- App and network state are now logged when bridge network calls fail, to aid debugging connectivity issues.
+
+### Fixed
+- **Wallet book deep links.** Wallet-book deep link URLs are no longer blocked by the SDK's URL handling.
+- **`getWalletRecoveryState()` hang.** Bounded the call with a 30 s timeout so it can't wait indefinitely on an unresponsive bridge.
+
 ## [1.2.0]
 
 ### Added
