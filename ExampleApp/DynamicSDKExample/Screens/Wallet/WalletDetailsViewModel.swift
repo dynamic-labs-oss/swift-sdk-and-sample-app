@@ -83,7 +83,7 @@ final class WalletDetailsViewModel: ObservableObject {
     errorMessage = nil
     Task { @MainActor in
       do {
-        try await sdk.ui.revealEmbeddedWalletPrivateKey()
+        try await sdk.ui.revealEmbeddedWalletPrivateKey(walletId: wallet.id)
       } catch {
         errorMessage = "Failed to reveal private key: \(error)"
       }
