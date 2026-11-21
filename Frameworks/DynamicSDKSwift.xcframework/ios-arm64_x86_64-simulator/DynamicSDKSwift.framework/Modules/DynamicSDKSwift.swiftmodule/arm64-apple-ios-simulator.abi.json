@@ -4674,7 +4674,7 @@
           {
             "kind": "Function",
             "name": "sendBalance",
-            "printedName": "sendBalance(walletId:toAddress:amount:tokenAddress:tokenDecimals:approvalQuorum:)",
+            "printedName": "sendBalance(walletId:toAddress:amount:tokenAddress:tokenDecimals:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4729,39 +4729,11 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8Decimals14approvalQuorumS2S_S3SSgSiSgSDySSypGSgtYaKF",
-            "mangledName": "$s15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8Decimals14approvalQuorumS2S_S3SSgSiSgSDySSypGSgtYaKF",
+            "usr": "s:15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8DecimalsS2S_S3SSgSiSgtYaKF",
+            "mangledName": "$s15DynamicSDKSwift10TronModuleC11sendBalance8walletId9toAddress6amount05tokenJ00L8DecimalsS2S_S3SSgSiSgtYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -112701,32 +112673,17 @@
           {
             "kind": "Function",
             "name": "revealEmbeddedWalletPrivateKey",
-            "printedName": "revealEmbeddedWalletPrivateKey(walletId:)",
+            "printedName": "revealEmbeddedWalletPrivateKey()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15DynamicSDKSwift19UserInterfaceModuleC30revealEmbeddedWalletPrivateKey8walletIdySSSg_tYaKF",
-            "mangledName": "$s15DynamicSDKSwift19UserInterfaceModuleC30revealEmbeddedWalletPrivateKey8walletIdySSSg_tYaKF",
+            "usr": "s:15DynamicSDKSwift19UserInterfaceModuleC30revealEmbeddedWalletPrivateKeyyyYaKF",
+            "mangledName": "$s15DynamicSDKSwift19UserInterfaceModuleC30revealEmbeddedWalletPrivateKeyyyYaKF",
             "moduleName": "DynamicSDKSwift",
             "declAttributes": [
               "Final",
@@ -121554,2457 +121511,2457 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Chains\/EVM\/Erc20.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Chains\/EVM\/Erc20.swift",
       "kind": "StringLiteral",
       "offset": 75,
       "length": 4862,
       "value": "\"[\n{\n    \"constant\": true,\n    \"inputs\": [],\n    \"name\": \"name\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"string\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": false,\n    \"inputs\": [\n        {\n            \"name\": \"_spender\",\n            \"type\": \"address\"\n        },\n        {\n            \"name\": \"_value\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"name\": \"approve\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"bool\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"nonpayable\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": true,\n    \"inputs\": [],\n    \"name\": \"totalSupply\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": false,\n    \"inputs\": [\n        {\n            \"name\": \"_from\",\n            \"type\": \"address\"\n        },\n        {\n            \"name\": \"_to\",\n            \"type\": \"address\"\n        },\n        {\n            \"name\": \"_value\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"name\": \"transferFrom\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"bool\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"nonpayable\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": true,\n    \"inputs\": [],\n    \"name\": \"decimals\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"uint8\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": true,\n    \"inputs\": [\n        {\n            \"name\": \"_owner\",\n            \"type\": \"address\"\n        }\n    ],\n    \"name\": \"balanceOf\",\n    \"outputs\": [\n        {\n            \"name\": \"balance\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": true,\n    \"inputs\": [],\n    \"name\": \"symbol\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"string\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": false,\n    \"inputs\": [\n        {\n            \"name\": \"_to\",\n            \"type\": \"address\"\n        },\n        {\n            \"name\": \"_value\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"name\": \"transfer\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"bool\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"nonpayable\",\n    \"type\": \"function\"\n},\n{\n    \"constant\": true,\n    \"inputs\": [\n        {\n            \"name\": \"_owner\",\n            \"type\": \"address\"\n        },\n        {\n            \"name\": \"_spender\",\n            \"type\": \"address\"\n        }\n    ],\n    \"name\": \"allowance\",\n    \"outputs\": [\n        {\n            \"name\": \"\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"payable\": false,\n    \"stateMutability\": \"view\",\n    \"type\": \"function\"\n},\n{\n    \"payable\": true,\n    \"stateMutability\": \"payable\",\n    \"type\": \"fallback\"\n},\n{\n    \"anonymous\": false,\n    \"inputs\": [\n        {\n            \"indexed\": true,\n            \"name\": \"owner\",\n            \"type\": \"address\"\n        },\n        {\n            \"indexed\": true,\n            \"name\": \"spender\",\n            \"type\": \"address\"\n        },\n        {\n            \"indexed\": false,\n            \"name\": \"value\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"name\": \"Approval\",\n    \"type\": \"event\"\n},\n{\n    \"anonymous\": false,\n    \"inputs\": [\n        {\n            \"indexed\": true,\n            \"name\": \"from\",\n            \"type\": \"address\"\n        },\n        {\n            \"indexed\": true,\n            \"name\": \"to\",\n            \"type\": \"address\"\n        },\n        {\n            \"indexed\": false,\n            \"name\": \"value\",\n            \"type\": \"uint256\"\n        }\n    ],\n    \"name\": \"Transfer\",\n    \"type\": \"event\"\n}\n]\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Chains\/Solana\/SolanaRpcClient.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Chains\/Solana\/SolanaRpcClient.swift",
       "kind": "BooleanLiteral",
       "offset": 3133,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/SDKVersion.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 8,
-      "value": "\"1.11.0\""
+      "value": "\"1.10.0\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/WebViewVersion.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Constants\/WebViewVersion.swift",
       "kind": "StringLiteral",
       "offset": 90,
       "length": 8,
-      "value": "\"5.20.0\""
+      "value": "\"5.18.0\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "StringLiteral",
       "offset": 1421,
       "length": 36,
       "value": "\"https:\/\/app.dynamicauth.com\/api\/v0\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "StringLiteral",
       "offset": 1543,
       "length": 9,
       "value": "\"Dynamic\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "BooleanLiteral",
       "offset": 1674,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "Array",
       "offset": 2073,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "BooleanLiteral",
       "offset": 2960,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/ClientProps.swift",
       "kind": "BooleanLiteral",
       "offset": 2992,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
       "kind": "Array",
       "offset": 242,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
       "kind": "IntegerLiteral",
       "offset": 289,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateLog.swift",
       "kind": "IntegerLiteral",
       "offset": 661,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
       "kind": "StringLiteral",
       "offset": 488,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
       "kind": "StringLiteral",
       "offset": 526,
       "length": 14,
       "value": "\"path=unknown\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
       "kind": "BooleanLiteral",
       "offset": 565,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/DeviceStateMonitor.swift",
       "kind": "Array",
       "offset": 617,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
       "kind": "IntegerLiteral",
       "offset": 1478,
       "length": 17,
       "value": "1000000000000"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
       "kind": "IntegerLiteral",
       "offset": 1507,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
       "kind": "StringLiteral",
       "offset": 1801,
       "length": 36,
       "value": "\"Unsupported date format: \""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/JSONDecoder+DynamicSDK.swift",
       "kind": "StringLiteral",
       "offset": 1836,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/KeychainHelper.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/KeychainHelper.swift",
       "kind": "StringLiteral",
       "offset": 267,
       "length": 17,
       "value": "\"xyz.dynamic.sdk\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 88,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 104,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 120,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "IntegerLiteral",
       "offset": 137,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 393,
       "length": 17,
       "value": "\"xyz.dynamic.sdk\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 422,
       "length": 5,
       "value": "\"SDK\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Message.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Message.swift",
       "kind": "Array",
       "offset": 963,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Message.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/Message.swift",
       "kind": "Array",
       "offset": 1152,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/MessageTransport.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/MessageTransport.swift",
       "kind": "Dictionary",
       "offset": 195,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/MessageTransport.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/MessageTransport.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 34,
       "value": "\"DynamicSDKSwift.MessageTransport\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "IntegerLiteral",
       "offset": 349,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
       "offset": 1134,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
       "offset": 1941,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "Array",
       "offset": 6347,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "StringLiteral",
       "offset": 6974,
       "length": 37,
       "value": "\"Invalid response for \""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/RequestChannel.swift",
       "kind": "StringLiteral",
       "offset": 7010,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
       "kind": "StringLiteral",
       "offset": 173,
       "length": 5,
       "value": "\"sdk\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
       "kind": "StringLiteral",
       "offset": 212,
       "length": 15,
       "value": "\"loadedChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/SdkModule.swift",
       "kind": "StringLiteral",
       "offset": 259,
       "length": 20,
       "value": "\"sdk__loadedChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
       "kind": "StringLiteral",
       "offset": 314,
       "length": 19,
       "value": "\"delegateKeyShares\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/StepUpGate.swift",
       "kind": "StringLiteral",
       "offset": 356,
       "length": 18,
       "value": "\"revokeDelegation\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/VisibilityModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Core\/VisibilityModule.swift",
       "kind": "StringLiteral",
       "offset": 242,
       "length": 15,
       "value": "\"setVisibility\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/Handlers.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/Handlers.swift",
       "kind": "Array",
       "offset": 452,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupFetcherHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupFetcherHandler.swift",
       "kind": "IntegerLiteral",
       "offset": 275,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupPasskeyPlatformHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupPasskeyPlatformHandler.swift",
       "kind": "BooleanLiteral",
       "offset": 280,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
       "kind": "Array",
       "offset": 157,
       "length": 156,
       "value": "[\"https\", \"http\", \"mailto\", \"tel\", \"metamask\", \"phantom\", \"trust\", \"okex\", \"rainbow\", \"backpack\", \"bitkeep\", \"solflare\", \"exodus\", \"zerion\"]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
       "kind": "Array",
       "offset": 365,
       "length": 94,
       "value": "[\"file\", \"javascript\", \"data\", \"blob\", \"about\", \"itms-services\", \"prefs\", \"app-prefs\"]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
       "kind": "Array",
       "offset": 539,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/SetupUrlHandler.swift",
       "kind": "Array",
       "offset": 1448,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/WalletBookSchemes.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Handlers\/WalletBookSchemes.swift",
       "kind": "Array",
       "offset": 232,
       "length": 5757,
       "value": "[\"abc-wallet\", \"abpay\", \"abra\", \"abt\", \"adf\", \"airgap-wallet\", \"aktionariat\", \"alephium\", \"alpha-u-wallet\", \"amazeapp\", \"ambire\", \"ammerwallet\", \"ancrypto\", \"anybit\", \"ape\", \"app.dosivault\", \"arcawallet\", \"arculuswc\", \"argent\", \"assure\", \"astrox\", \"atomicwallet\", \"atwallet\", \"aurora-pass\", \"avacus\", \"awallet\", \"azcoiner\", \"backpack\", \"balletcrypto\", \"bee\", \"beexo\", \"berasig\", \"bharatbox\", \"bhcwallet\", \"bifrostwallet\", \"billionwallet\", \"bimwallet\", \"bitcoincom\", \"bitizen\", \"bitkeep\", \"bitnovowallet\", \"bitpay\", \"bitpiewc\", \"bitski\", \"bitso\", \"bitverseapp\", \"blackfortwc\", \"blockaura\", \"blockchain-wallet\", \"blofin-wallet\", \"bnc\", \"bncus\", \"bonuzapp\", \"broearn\", \"bron-mobile\", \"bscwalletapp\", \"burrito\", \"buzzup\", \"bw\", \"bybitapp\", \"caesium-app\", \"cakewallet\", \"cardwallet\", \"catecoin\", \"celo\", \"cfcx\", \"chainapp\", \"chiawallet\", \"ciphertrade\", \"clave\", \"clot\", \"coin98\", \"coingrig\", \"coinomi\", \"coinstats\", \"coinwallet\", \"com.arianee.wallet\", \"com.ipmb.app\", \"com.kresus.superapp\", \"com.mpcvault.mobileapp\", \"com.oice\", \"com.plena\", \"com.wallet.passpay\", \"concordiumwallet\", \"coolwallet\", \"core\", \"cosine\", \"cosmostation\", \"creditwallet\", \"cryptnox\", \"crypto.ab.wallet\", \"crypto.noone.wallet\", \"cryptobrowser\", \"cryptokara\", \"ctrl-mobile\", \"cypherchat\", \"cypherwallet\", \"daffione\", \"dailywallet\", \"dcent\", \"debox\", \"defiantapp\", \"dexari\", \"dfinnwallet\", \"dgg\", \"diamwallet\", \"digitalshield-wallet\", \"dokwallet\", \"dolletwc\", \"dotted\", \"dropmate\", \"dropp\", \"earthwallet\", \"echooo\", \"ecoinwallet\", \"edge\", \"ellipal\", \"enjinwallet\", \"ennowallet\", \"essentials\", \"ethermail\", \"everspace\", \"exodus\", \"expo2025-wallet\", \"familywallet\", \"fintoken\", \"fireblocks-wc\", \"flashwallet\", \"floozwallet\", \"foxwallet\", \"freedom-wallet\", \"freeholdapp\", \"freighterwallet\", \"frontier\", \"frostfire\", \"frw\", \"fw\", \"fxwallet\", \"gamic\", \"gem\", \"getcogni\", \"girinwallet\", \"gk8\", \"gm2\", \"goldbit\", \"goldwallet\", \"gooddollar\", \"greenhood\", \"grrnpay\", \"gtweb3wallet\", \"guardiianwallet\", \"haha\", \"hai\", \"halowallet\", \"haqq\", \"harti\", \"hashpack\", \"hashwallet\", \"hbwallet\", \"helix-id\", \"herewallet\", \"herowallet\", \"hideoutwallet\", \"hippowallet\", \"holdstation\", \"hootark\", \"hotwallet\", \"humblwallet\", \"huobiwallet\", \"hyperpay\", \"ibvm\", \"icewal\", \"iluminary\", \"impactsx\", \"imtokenv2\", \"indigg\", \"interlinkid\", \"internetmoney\", \"io.scramberry.v7bmfgda1vo42ue385xc\", \"io.universaleverything.universalprofiles\", \"iopay\", \"islamiwallet\", \"ivirse\", \"jbw\", \"joey\", \"jupiter\", \"kabila-wallet\", \"keplrwallet\", \"keyring\", \"kgen\", \"kigo-mobile-app\", \"kimlwallet\", \"klever-wallet\", \"klipwallet\", \"komet\", \"konio\", \"kotaiwallet\", \"kotlin-web3wallet\", \"kowallet\", \"krakenwallet\", \"kriptok\", \"kriptomatapp\", \"kriptonio\", \"kryptogo\", \"krystalwallet\", \"kucoin\", \"leapcompass\", \"leapcosmos\", \"ledgerlive\", \"legacy\", \"legionapp\", \"lfwallet\", \"libera\", \"lif3wallet\", \"linen\", \"link.kelp.finance\", \"lobstr\", \"loopring\", \"lumina\", \"lunascape\", \"lxxdao\", \"m1nty\", \"mathwallet\", \"maxwallet\", \"mecowallet\", \"metacubewallet\", \"metamask\", \"metaone\", \"metawallet\", \"mewwallet\", \"midoin\", \"minerva\", \"miraiapp\", \"mixin\", \"modularwallet\", \"mone\", \"moonstake\", \"mtwallet\", \"myapp\", \"mywallet-wc\", \"nash\", \"ncg\", \"nefti\", \"neon\", \"nestwallet\", \"network.gridlock.appgridlock\", \"nightly\", \"nodle\", \"nonbank\", \"nova\", \"novawallet\", \"nowwallet\", \"nptwc\", \"nvxowallet\", \"oasys-wallet\", \"oblio\", \"obvious\", \"okex\", \"oksewallet\", \"okto\", \"okxwallet\", \"omni\", \"oneinch\", \"onekey-wallet\", \"onewallet\", \"onlybulls\", \"ontoprovider\", \"onyxwallet\", \"openloop\", \"opto\", \"opz-wallet\", \"org.bladelabs.bladewallet\", \"orion\", \"outlaw\", \"overflex\", \"owallet\", \"oxalus\", \"paliwallet\", \"panaromawallet\", \"pandoshiwallet\", \"paraswap\", \"passwallet\", \"paybolt\", \"pgk\", \"pillarwallet\", \"pintu\", \"pitaka\", \"plasmawallet\", \"pltwallet\", \"plug\", \"plumaa\", \"pluswallet\", \"plutope\", \"pockie\", \"porta\", \"proton\", \"purewalletp\", \"puzzleapp\", \"pwc\", \"qiemobilewalletconnect\", \"qubetics\", \"qubic\", \"rabby\", \"rainbow\", \"readywallet\", \"renegade-web3wallet\", \"revelatorwallet\", \"rewardywallet\", \"rezor\", \"ricewallet\", \"ripio\", \"rn-web3wallet-internal\", \"roam\", \"roarwallet\", \"robinhood-wallet\", \"roninwallet\", \"saas\", \"safemoon\", \"safepalwallet\", \"safewallet\", \"sahalwallet\", \"saify\", \"satuwallet\", \"savl\", \"secux\", \"self\", \"shapeshift\", \"shefi\", \"shido\", \"shinobi-wallet\", \"sinohopeapp\", \"sinum\", \"slaviwallet\", \"smartbody\", \"socios-mob\", \"socwallet\", \"soulwallet\", \"spotonchain\", \"squirrel-wallet\", \"staticbit\", \"status-app\", \"stickyapp\", \"streakk\", \"strikex\", \"subwallet\", \"superhero\", \"sweat\", \"swopapp\", \"talkapp\", \"talken-wallet\", \"tangem\", \"tastycrypto\", \"tellaw\", \"thorwallet\", \"tiduswallet\", \"timeless-x\", \"tk\", \"tkwc\", \"tobewallet\", \"tofee\", \"tokenb-web3wallet\", \"tomiwallet\", \"tomo\", \"tpoutside\", \"transi\", \"trust\", \"trustassetapp\", \"ttmwalletapp\", \"tw\", \"u2uwc\", \"ukey-wallet\", \"ukisshub\", \"ullawallet\", \"ultimate\", \"unawallet\", \"uniswap\", \"unstoppable.money\", \"unstoppabledomains\", \"up-io\", \"uptn\", \"utorg\", \"uxuyapp\", \"velgazm\", \"verso\", \"veworld\", \"vimwallet\", \"virgowallet\", \"vkxwallet\", \"volsungar\", \"volt\", \"w3akvrn\", \"w3wallet\", \"wali\", \"wallacy\", \"wallet.pulse\", \"wallet3\", \"walletapp\", \"wallettoday\", \"walletverse\", \"walllet\", \"wc\", \"wc-altme\", \"wcflutterwallet-internal\", \"wcqoin\", \"wemixwallet30\", \"whitewallet\", \"wigwam\", \"wirexwallet\", \"wokwallet\", \"wombat-wc\", \"wpapp\", \"x-app-open-wallet\", \"xellar\", \"xenea\", \"xfunwallet\", \"xova\", \"xportal\", \"xucre.expo.client\", \"yo-wallet\", \"yuse\", \"zeal\", \"zel\", \"zeluswallet\", \"zengo\", \"zerion\", \"zypto\"]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BaseWallet.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BaseWallet.swift",
       "kind": "StringLiteral",
       "offset": 47,
       "length": 10,
       "value": "\"-zerodev\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BaseWallet.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BaseWallet.swift",
       "kind": "BooleanLiteral",
       "offset": 549,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountDetail.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountDetail.swift",
       "kind": "Array",
       "offset": 682,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountDetail.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountDetail.swift",
       "kind": "Array",
       "offset": 725,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
       "kind": "StringLiteral",
       "offset": 107,
       "length": 7,
       "value": "\"owner\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
       "kind": "StringLiteral",
       "offset": 130,
       "length": 7,
       "value": "\"admin\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountMemberRole.swift",
       "kind": "StringLiteral",
       "offset": 154,
       "length": 8,
       "value": "\"viewer\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
       "kind": "StringLiteral",
       "offset": 3905,
       "length": 9,
       "value": "\"pending\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
       "kind": "StringLiteral",
       "offset": 3933,
       "length": 10,
       "value": "\"executed\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
       "kind": "StringLiteral",
       "offset": 3961,
       "length": 9,
       "value": "\"expired\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountProposal.swift",
       "kind": "StringLiteral",
       "offset": 3987,
       "length": 8,
       "value": "\"vetoed\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 117,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 146,
       "length": 13,
       "value": "\"phoneNumber\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 184,
       "length": 16,
       "value": "\"externalUserId\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 16,
       "value": "\"socialUsername\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 267,
       "length": 17,
       "value": "\"socialAccountId\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerIdentifierType.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerType.swift",
       "kind": "StringLiteral",
       "offset": 109,
       "length": 9,
       "value": "\"endUser\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/BusinessAccountSignerType.swift",
       "kind": "StringLiteral",
       "offset": 135,
       "length": 8,
       "value": "\"server\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 138,
       "length": 5,
       "value": "\"EVM\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 157,
       "length": 5,
       "value": "\"SOL\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 5,
       "value": "\"SUI\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 195,
       "length": 5,
       "value": "\"BTC\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 217,
       "length": 8,
       "value": "\"COSMOS\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 240,
       "length": 6,
       "value": "\"FLOW\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 262,
       "length": 7,
       "value": "\"STARK\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 284,
       "length": 6,
       "value": "\"ALGO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 304,
       "length": 5,
       "value": "\"ETH\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 327,
       "length": 9,
       "value": "\"ECLIPSE\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 352,
       "length": 7,
       "value": "\"SPARK\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 6,
       "value": "\"TRON\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 396,
       "length": 7,
       "value": "\"APTOS\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 417,
       "length": 5,
       "value": "\"TON\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ChainEnum.swift",
       "kind": "StringLiteral",
       "offset": 440,
       "length": 9,
       "value": "\"STELLAR\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
       "kind": "StringLiteral",
       "offset": 189,
       "length": 11,
       "value": "\"delegated\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
       "kind": "StringLiteral",
       "offset": 261,
       "length": 8,
       "value": "\"denied\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/DelegatedAccess.swift",
       "kind": "StringLiteral",
       "offset": 339,
       "length": 9,
       "value": "\"pending\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 226,
       "length": 5,
       "value": "\"Evm\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 5,
       "value": "\"Sol\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 264,
       "length": 5,
       "value": "\"Sui\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 283,
       "length": 5,
       "value": "\"Ton\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 302,
       "length": 5,
       "value": "\"Btc\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/EmbeddedWalletChain.swift",
       "kind": "StringLiteral",
       "offset": 322,
       "length": 6,
       "value": "\"Tron\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 377,
       "length": 4,
       "value": "\"ar\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 394,
       "length": 4,
       "value": "\"da\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 411,
       "length": 4,
       "value": "\"de\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 428,
       "length": 4,
       "value": "\"en\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 445,
       "length": 4,
       "value": "\"es\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 462,
       "length": 4,
       "value": "\"fi\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 479,
       "length": 4,
       "value": "\"fr\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 496,
       "length": 4,
       "value": "\"he\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 513,
       "length": 4,
       "value": "\"it\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 4,
       "value": "\"ja\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 547,
       "length": 4,
       "value": "\"nl\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 564,
       "length": 4,
       "value": "\"pl\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 581,
       "length": 4,
       "value": "\"pt\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 598,
       "length": 4,
       "value": "\"ru\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 615,
       "length": 4,
       "value": "\"uk\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/LocaleLanguage.swift",
       "kind": "StringLiteral",
       "offset": 632,
       "length": 4,
       "value": "\"zh\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
       "kind": "StringLiteral",
       "offset": 111,
       "length": 6,
       "value": "\"totp\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
       "kind": "StringLiteral",
       "offset": 135,
       "length": 9,
       "value": "\"passkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/MfaDevice.swift",
       "kind": "StringLiteral",
       "offset": 160,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
       "kind": "StringLiteral",
       "offset": 2303,
       "length": 11,
       "value": "\"preferred\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
       "kind": "BooleanLiteral",
       "offset": 2347,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PasskeyRegisterRequest.swift",
       "kind": "StringLiteral",
       "offset": 2380,
       "length": 13,
       "value": "\"discouraged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyDesugarResult.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyDesugarResult.swift",
       "kind": "Array",
       "offset": 183,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
       "kind": "StringLiteral",
       "offset": 102,
       "length": 13,
       "value": "\"blockExport\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
       "kind": "StringLiteral",
       "offset": 140,
       "length": 16,
       "value": "\"allowAddresses\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
       "kind": "StringLiteral",
       "offset": 180,
       "length": 15,
       "value": "\"denyAddresses\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 25,
       "value": "\"maxAmountPerTransaction\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleKind.swift",
       "kind": "StringLiteral",
       "offset": 285,
       "length": 22,
       "value": "\"approvalRequirements\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleType.swift",
       "kind": "StringLiteral",
       "offset": 96,
       "length": 7,
       "value": "\"allow\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleType.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/PolicyRuleType.swift",
       "kind": "StringLiteral",
       "offset": 118,
       "length": 6,
       "value": "\"deny\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 780,
       "length": 9,
       "value": "\"sandbox\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 804,
       "length": 6,
       "value": "\"live\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1260,
       "length": 8,
       "value": "\"custom\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1288,
       "length": 9,
       "value": "\"default\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1752,
       "length": 10,
       "value": "\"standard\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1779,
       "length": 8,
       "value": "\"custom\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1852,
       "length": 6,
       "value": "\"text\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1877,
       "length": 10,
       "value": "\"checkbox\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 1904,
       "length": 8,
       "value": "\"select\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5778,
       "length": 11,
       "value": "\"emailOnly\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5809,
       "length": 11,
       "value": "\"magicLink\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5836,
       "length": 7,
       "value": "\"apple\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5863,
       "length": 11,
       "value": "\"bitbucket\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5899,
       "length": 16,
       "value": "\"coinbasesocial\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5933,
       "length": 9,
       "value": "\"discord\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5962,
       "length": 11,
       "value": "\"epicgames\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 5992,
       "length": 10,
       "value": "\"facebook\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6022,
       "length": 11,
       "value": "\"farcaster\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6050,
       "length": 8,
       "value": "\"github\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6075,
       "length": 8,
       "value": "\"gitlab\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6100,
       "length": 8,
       "value": "\"google\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6128,
       "length": 11,
       "value": "\"instagram\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6158,
       "length": 10,
       "value": "\"linkedin\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6188,
       "length": 11,
       "value": "\"microsoft\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6216,
       "length": 8,
       "value": "\"twitch\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6242,
       "length": 9,
       "value": "\"twitter\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6268,
       "length": 8,
       "value": "\"blocto\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6292,
       "length": 7,
       "value": "\"banxa\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6324,
       "length": 16,
       "value": "\"coinbaseOnramp\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6363,
       "length": 14,
       "value": "\"cryptoDotCom\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6395,
       "length": 9,
       "value": "\"dynamic\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6422,
       "length": 9,
       "value": "\"alchemy\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6449,
       "length": 9,
       "value": "\"zerodev\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6477,
       "length": 10,
       "value": "\"telegram\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6505,
       "length": 9,
       "value": "\"turnkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6537,
       "length": 14,
       "value": "\"coinbaseWaas\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6565,
       "length": 5,
       "value": "\"sms\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6588,
       "length": 9,
       "value": "\"spotify\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6614,
       "length": 8,
       "value": "\"tiktok\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6637,
       "length": 6,
       "value": "\"line\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6659,
       "length": 7,
       "value": "\"steam\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6684,
       "length": 9,
       "value": "\"shopify\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6710,
       "length": 8,
       "value": "\"zksync\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6735,
       "length": 8,
       "value": "\"kraken\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6762,
       "length": 10,
       "value": "\"blockaid\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6790,
       "length": 9,
       "value": "\"passkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6814,
       "length": 6,
       "value": "\"okta\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6839,
       "length": 10,
       "value": "\"sendgrid\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 6866,
       "length": 8,
       "value": "\"resend\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7113,
       "length": 4,
       "value": "\"v6\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7130,
       "length": 4,
       "value": "\"v7\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7208,
       "length": 6,
       "value": "\"v2_4\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7228,
       "length": 6,
       "value": "\"v3_0\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7248,
       "length": 6,
       "value": "\"v3_1\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7268,
       "length": 6,
       "value": "\"v3_2\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7288,
       "length": 6,
       "value": "\"v3_3\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7558,
       "length": 10,
       "value": "\"_default\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7926,
       "length": 25,
       "value": "\"zerodev_signer_to_ecdsa\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 7972,
       "length": 21,
       "value": "\"zerodev_multi_chain\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8068,
       "length": 9,
       "value": "\"STACKUP\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8095,
       "length": 9,
       "value": "\"PIMLICO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8122,
       "length": 9,
       "value": "\"ALCHEMY\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8148,
       "length": 8,
       "value": "\"GELATO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8465,
       "length": 10,
       "value": "\"coinbase\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 8492,
       "length": 8,
       "value": "\"kraken\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10528,
       "length": 9,
       "value": "\"dynamic\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10557,
       "length": 11,
       "value": "\"magicLink\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10585,
       "length": 8,
       "value": "\"blocto\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10611,
       "length": 9,
       "value": "\"turnkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10643,
       "length": 14,
       "value": "\"coinbaseWaas\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10857,
       "length": 7,
       "value": "\"apple\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10884,
       "length": 11,
       "value": "\"bitbucket\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10920,
       "length": 16,
       "value": "\"coinbasesocial\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10954,
       "length": 9,
       "value": "\"discord\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 10983,
       "length": 11,
       "value": "\"epicgames\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11013,
       "length": 10,
       "value": "\"facebook\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11043,
       "length": 11,
       "value": "\"farcaster\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11071,
       "length": 8,
       "value": "\"github\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11096,
       "length": 8,
       "value": "\"gitlab\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11121,
       "length": 8,
       "value": "\"google\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11149,
       "length": 11,
       "value": "\"instagram\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11179,
       "length": 10,
       "value": "\"linkedin\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11209,
       "length": 11,
       "value": "\"microsoft\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11237,
       "length": 8,
       "value": "\"twitch\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11263,
       "length": 9,
       "value": "\"twitter\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11291,
       "length": 10,
       "value": "\"telegram\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11319,
       "length": 9,
       "value": "\"spotify\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11345,
       "length": 8,
       "value": "\"tiktok\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11368,
       "length": 6,
       "value": "\"line\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11390,
       "length": 7,
       "value": "\"steam\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11415,
       "length": 9,
       "value": "\"shopify\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11441,
       "length": 8,
       "value": "\"kraken\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11464,
       "length": 6,
       "value": "\"okta\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11802,
       "length": 9,
       "value": "\"passkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 11832,
       "length": 12,
       "value": "\"passphrase\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13081,
       "length": 4,
       "value": "\"V1\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13098,
       "length": 4,
       "value": "\"V2\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13115,
       "length": 4,
       "value": "\"V3\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13275,
       "length": 6,
       "value": "\"days\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13297,
       "length": 7,
       "value": "\"hours\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 13322,
       "length": 9,
       "value": "\"minutes\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14120,
       "length": 13,
       "value": "\"googleDrive\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14150,
       "length": 8,
       "value": "\"iCloud\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14176,
       "length": 9,
       "value": "\"dynamic\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14204,
       "length": 10,
       "value": "\"external\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14234,
       "length": 11,
       "value": "\"delegated\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14546,
       "length": 13,
       "value": "\"development\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 14580,
       "length": 12,
       "value": "\"production\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15304,
       "length": 7,
       "value": "\"login\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15611,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15642,
       "length": 15,
       "value": "\"emailAndPhone\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15673,
       "length": 7,
       "value": "\"phone\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15700,
       "length": 11,
       "value": "\"separator\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15728,
       "length": 8,
       "value": "\"social\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15751,
       "length": 6,
       "value": "\"text\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15774,
       "length": 8,
       "value": "\"wallet\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15800,
       "length": 9,
       "value": "\"passkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15882,
       "length": 6,
       "value": "\"left\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15905,
       "length": 8,
       "value": "\"center\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 15929,
       "length": 7,
       "value": "\"right\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 16132,
       "length": 7,
       "value": "\"banxa\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 16164,
       "length": 16,
       "value": "\"coinbaseOnramp\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 16203,
       "length": 14,
       "value": "\"cryptoDotCom\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 17148,
       "length": 6,
       "value": "\"totp\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 17172,
       "length": 9,
       "value": "\"passkey\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 17197,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 17605,
       "length": 14,
       "value": "\"localstorage\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ProjectSettings.swift",
       "kind": "StringLiteral",
       "offset": 17636,
       "length": 8,
       "value": "\"cookie\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/SigningConsentRequiredContext.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/SigningConsentRequiredContext.swift",
       "kind": "StringLiteral",
       "offset": 404,
       "length": 17,
       "value": "\"INTENT_REQUIRED\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/SigningConsentRequiredContext.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/SigningConsentRequiredContext.swift",
       "kind": "StringLiteral",
       "offset": 585,
       "length": 20,
       "value": "\"APPROVALS_REQUIRED\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
       "kind": "StringLiteral",
       "offset": 141,
       "length": 14,
       "value": "\"localStorage\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
       "kind": "StringLiteral",
       "offset": 180,
       "length": 16,
       "value": "\"sessionStorage\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/StorageMessageSource.swift",
       "kind": "StringLiteral",
       "offset": 220,
       "length": 15,
       "value": "\"secureStorage\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
       "kind": "StringLiteral",
       "offset": 364,
       "length": 12,
       "value": "\"TWO_OF_TWO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
       "kind": "StringLiteral",
       "offset": 397,
       "length": 14,
       "value": "\"TWO_OF_THREE\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/ThresholdSignatureScheme.swift",
       "kind": "StringLiteral",
       "offset": 433,
       "length": 15,
       "value": "\"THREE_OF_FIVE\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 17,
       "value": "\"credential:link\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 19,
       "value": "\"credential:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 268,
       "length": 19,
       "value": "\"credential:unlink\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 313,
       "length": 15,
       "value": "\"wallet:export\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 353,
       "length": 13,
       "value": "\"wallet:sign\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 391,
       "length": 15,
       "value": "\"wallet:delete\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 17,
       "value": "\"wallet:delegate\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 473,
       "length": 16,
       "value": "\"wallet:restore\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 511,
       "length": 13,
       "value": "\"user:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 545,
       "length": 13,
       "value": "\"user:delete\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 598,
       "length": 19,
       "value": "\"console:mfa:reset\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 656,
       "length": 25,
       "value": "\"console:settings:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 720,
       "length": 23,
       "value": "\"console:member:invite\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 782,
       "length": 20,
       "value": "\"console:sso:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 841,
       "length": 21,
       "value": "\"console:user:delete\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 901,
       "length": 24,
       "value": "\"console:project:delete\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 964,
       "length": 29,
       "value": "\"console:admin_action:review\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1033,
       "length": 34,
       "value": "\"console:approval_workflow:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1110,
       "length": 29,
       "value": "\"business_account:signer:add\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1181,
       "length": 32,
       "value": "\"business_account:signer:remove\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1255,
       "length": 29,
       "value": "\"business_account:member:add\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1326,
       "length": 32,
       "value": "\"business_account:member:remove\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1400,
       "length": 37,
       "value": "\"business_account:member:role:update\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1480,
       "length": 37,
       "value": "\"business_account:transfer_ownership\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1559,
       "length": 30,
       "value": "\"business_account:link_wallet\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/TokenScope.swift",
       "kind": "StringLiteral",
       "offset": 1631,
       "length": 32,
       "value": "\"business_account:wallet:remove\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 273,
       "length": 5,
       "value": "\"EVM\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 292,
       "length": 5,
       "value": "\"SVM\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 311,
       "length": 5,
       "value": "\"BTC\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 5,
       "value": "\"SUI\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 349,
       "length": 5,
       "value": "\"TON\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 373,
       "length": 10,
       "value": "\"MIDNIGHT\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 401,
       "length": 9,
       "value": "\"STELLAR\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 426,
       "length": 7,
       "value": "\"TEMPO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 448,
       "length": 6,
       "value": "\"ALEO\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WaasChain.swift",
       "kind": "StringLiteral",
       "offset": 469,
       "length": 6,
       "value": "\"TRON\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WriteContractInput.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Models\/WriteContractInput.swift",
       "kind": "Array",
       "offset": 969,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
       "kind": "StringLiteral",
       "offset": 411,
       "length": 6,
       "value": "\"auth\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 26,
       "value": "\"authenticatedUserChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
       "kind": "StringLiteral",
       "offset": 512,
       "length": 14,
       "value": "\"tokenChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/AuthModule.swift",
       "kind": "StringLiteral",
       "offset": 568,
       "length": 22,
       "value": "\"minifiedTokenChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/BusinessAccountsModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/BusinessAccountsModule.swift",
       "kind": "IntegerLiteral",
       "offset": 477,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 1989,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 2027,
       "length": 3,
       "value": "120"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 2748,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnEvmExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 2786,
       "length": 3,
       "value": "120"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnHttpClient.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnHttpClient.swift",
       "kind": "BooleanLiteral",
       "offset": 1669,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
       "kind": "StringLiteral",
       "offset": 688,
       "length": 36,
       "value": "\"https:\/\/app.dynamicauth.com\/api\/v0\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
       "kind": "IntegerLiteral",
       "offset": 778,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnService.swift",
       "kind": "Array",
       "offset": 6102,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 1748,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaExecutor.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaExecutor.swift",
       "kind": "IntegerLiteral",
       "offset": 2295,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
       "kind": "StringLiteral",
       "offset": 222,
       "length": 20,
       "value": "\"yield_step_expired\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
       "kind": "StringLiteral",
       "offset": 310,
       "length": 19,
       "value": "\"yield_step_failed\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/Earn\/EarnSolanaStepError.swift",
       "kind": "StringLiteral",
       "offset": 407,
       "length": 24,
       "value": "\"yield_step_send_failed\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/EmbeddedWalletsModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/EmbeddedWalletsModule.swift",
       "kind": "StringLiteral",
       "offset": 408,
       "length": 17,
       "value": "\"embeddedWallets\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/EmbeddedWalletsModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/EmbeddedWalletsModule.swift",
       "kind": "StringLiteral",
       "offset": 455,
       "length": 18,
       "value": "\"hasWalletChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/MfaModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/MfaModule.swift",
       "kind": "BooleanLiteral",
       "offset": 3962,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 323,
       "length": 10,
       "value": "\"networks\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 366,
       "length": 12,
       "value": "\"evmChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 414,
       "length": 15,
       "value": "\"solanaChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 462,
       "length": 12,
       "value": "\"suiChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 511,
       "length": 16,
       "value": "\"bitcoinChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/NetworksModule.swift",
       "kind": "StringLiteral",
       "offset": 8708,
       "length": 10,
       "value": "\"registry\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WaasModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WaasModule.swift",
       "kind": "IntegerLiteral",
       "offset": 1152,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WaasModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WaasModule.swift",
       "kind": "Array",
       "offset": 6275,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WalletConnectModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WalletConnectModule.swift",
       "kind": "Dictionary",
       "offset": 656,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WalletConnectModule.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/Module\/WalletConnectModule.swift",
       "kind": "Array",
       "offset": 925,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/SwiftUI\/DynamicUI.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/SwiftUI\/DynamicUI.swift",
       "kind": "BooleanLiteral",
       "offset": 800,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/SwiftUI\/DynamicWebViewContainer.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/SwiftUI\/DynamicWebViewContainer.swift",
       "kind": "BooleanLiteral",
       "offset": 738,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "BooleanLiteral",
       "offset": 1435,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 1812,
       "length": 16,
       "value": "\"UIGestureGraph\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 1856,
       "length": 60,
       "value": "\"[GestureFix] UIGestureGraph not found; skipping workaround\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 1977,
       "length": 67,
       "value": "\"addUniqueEdgeWithLabel:sourceNode:targetNode:directed:properties:\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 2134,
       "length": 59,
       "value": "\"[GestureFix] target method not found; skipping workaround\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "BooleanLiteral",
       "offset": 2231,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 2908,
       "length": 76,
       "value": "\"[GestureFix] skipped gesture-graph edge with nil node (iOS <26 workaround)\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/UIKit\/GestureGraphCrashWorkaround.swift",
       "kind": "StringLiteral",
       "offset": 3211,
       "length": 69,
       "value": "\"[GestureFix] installed UIGestureGraph nil-edge workaround (iOS <26)\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 151,
       "length": 20,
       "value": "\"ReactNativeWebView\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 576,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
       "kind": "Array",
       "offset": 5856,
       "length": 33,
       "value": "[\"localhost\", \"127.0.0.1\", \"::1\"]"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/DynamicWebViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 6306,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "IntegerLiteral",
       "offset": 4249,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "IntegerLiteral",
       "offset": 4366,
       "length": 6,
       "value": "30000"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "IntegerLiteral",
       "offset": 4449,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "IntegerLiteral",
       "offset": 4526,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "IntegerLiteral",
       "offset": 4633,
       "length": 5,
       "value": "5000"
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "StringLiteral",
       "offset": 4747,
       "length": 20,
       "value": "\"sdk__loadedChanged\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "StringLiteral",
       "offset": 5138,
       "length": 45,
       "value": "\"DynamicSDKSwift.WebviewLoadController.state\""
     },
     {
-      "filePath": "\/Users\/runner\/actions-runner-1\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
+      "filePath": "\/Users\/runner\/actions-runner-2\/_work\/sdk-swift-with-webview\/sdk-swift-with-webview\/sdk-swift-with-webview\/Packages\/DynamicSDKSwift\/Sources\/WebView\/WebviewLoadController.swift",
       "kind": "BooleanLiteral",
       "offset": 5365,
       "length": 5,

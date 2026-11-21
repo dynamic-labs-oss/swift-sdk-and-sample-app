@@ -165,7 +165,7 @@ public struct TonNetworkDetails {
 final public class TronModule {
   public init(_ transport: DynamicSDKSwift.MessageTransport)
   final public func signMessage(walletId: Swift.String, message: Swift.String, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
-  final public func sendBalance(walletId: Swift.String, toAddress: Swift.String, amount: Swift.String, tokenAddress: Swift.String? = nil, tokenDecimals: Swift.Int? = nil, approvalQuorum: [Swift.String : Any]? = nil) async throws -> Swift.String
+  final public func sendBalance(walletId: Swift.String, toAddress: Swift.String, amount: Swift.String, tokenAddress: Swift.String? = nil, tokenDecimals: Swift.Int? = nil) async throws -> Swift.String
   final public func getBalance(walletId: Swift.String) async throws -> Swift.String
   final public func getNetworkDetails(walletId: Swift.String) async throws -> DynamicSDKSwift.TronNetworkDetails
   @objc deinit
@@ -2957,7 +2957,7 @@ final public class UserInterfaceModule {
   final public func setOnShowAuth(_ callback: @escaping () -> Swift.Void)
   final public func showAuth()
   final public func showUserProfile()
-  final public func revealEmbeddedWalletPrivateKey(walletId: Swift.String? = nil) async throws
+  final public func revealEmbeddedWalletPrivateKey() async throws
   @objc deinit
 }
 public struct WaasPasswordOverride {
